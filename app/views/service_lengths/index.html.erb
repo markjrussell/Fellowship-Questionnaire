@@ -1,0 +1,22 @@
+<h1>Listing service_lengths</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Order</th>
+  </tr>
+
+<% @service_lengths.each do |service_length| %>
+  <tr>
+    <td><%=h service_length.name %></td>
+    <td><%=h service_length.order %></td>
+    <td><%= link_to 'Show', service_length %></td>
+    <td><%= link_to 'Edit', edit_service_length_path(service_length) %></td>
+    <td><%= link_to 'Destroy', service_length, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New service_length', new_service_length_path %>

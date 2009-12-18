@@ -1,0 +1,13 @@
+<p>
+  <b>Question:</b>
+  <%=h @question_list.question %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%=h @question_list.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_list_path(@question_list) %> |
+<%= link_to 'Back', question_lists_path %>

@@ -1,0 +1,20 @@
+<h1>Editing question_list</h1>
+
+<% form_for(@question_list) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :question %><br />
+    <%= f.text_field :question %>
+  </p>
+  <p>
+    <%= f.label :order %><br />
+    <%= f.text_field :order %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @question_list %> |
+<%= link_to 'Back', question_lists_path %>

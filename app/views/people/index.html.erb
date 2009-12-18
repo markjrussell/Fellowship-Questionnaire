@@ -1,0 +1,90 @@
+<h1>Listing people</h1>
+
+<table>
+  <tr>
+    <th>Batch</th>
+    <th>Role</th>
+    <th>Gender</th>
+    <th>Work pattern</th>
+    <th>Practice service</th>
+    <th>Total service</th>
+    <th>Q1</th>
+    <th>Q2</th>
+    <th>Q3</th>
+    <th>Q4</th>
+    <th>Q5</th>
+    <th>Q6</th>
+    <th>Q7</th>
+    <th>Q8</th>
+    <th>Q9</th>
+    <th>Q10</th>
+    <th>Q11</th>
+    <th>Q12</th>
+    <th>Q13</th>
+    <th>Q14</th>
+    <th>Q15</th>
+    <th>Q16</th>
+    <th>Q17</th>
+    <th>Q18</th>
+    <th>Q19</th>
+    <th>Q20</th>
+    <th>Q21</th>
+    <th>Q22</th>
+    <th>Q23</th>
+    <th>Q24</th>
+    <th>Q25</th>
+    <th>Q26</th>
+    <th>Q27</th>
+    <th>Q28</th>
+    <th>Q29</th>
+    <th>Q30</th>
+  </tr>
+
+<% @people.each do |person| %>
+  <tr>
+    <td><%=h person.batch_id %></td>
+    <td><%=h person.role %></td>
+    <td><%=h person.gender %></td>
+    <td><%=h person.work_pattern %></td>
+    <td><%=h person.practice_service %></td>
+    <td><%=h person.total_service %></td>
+    <td><%=h person.q1 %></td>
+    <td><%=h person.q2 %></td>
+    <td><%=h person.q3 %></td>
+    <td><%=h person.q4 %></td>
+    <td><%=h person.q5 %></td>
+    <td><%=h person.q6 %></td>
+    <td><%=h person.q7 %></td>
+    <td><%=h person.q8 %></td>
+    <td><%=h person.q9 %></td>
+    <td><%=h person.q10 %></td>
+    <td><%=h person.q11 %></td>
+    <td><%=h person.q12 %></td>
+    <td><%=h person.q13 %></td>
+    <td><%=h person.q14 %></td>
+    <td><%=h person.q15 %></td>
+    <td><%=h person.q16 %></td>
+    <td><%=h person.q17 %></td>
+    <td><%=h person.q18 %></td>
+    <td><%=h person.q19 %></td>
+    <td><%=h person.q20 %></td>
+    <td><%=h person.q21 %></td>
+    <td><%=h person.q22 %></td>
+    <td><%=h person.q23 %></td>
+    <td><%=h person.q24 %></td>
+    <td><%=h person.q25 %></td>
+    <td><%=h person.q26 %></td>
+    <td><%=h person.q27 %></td>
+    <td><%=h person.q28 %></td>
+    <td><%=h person.q29 %></td>
+    <td><%=h person.q30 %></td>
+    <td><%= link_to 'Show', person %></td>
+    <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    <td><%= link_to 'Destroy', person, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New person', new_person_path %>

@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @gender.name %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%=h @gender.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_gender_path(@gender) %> |
+<%= link_to 'Back', genders_path %>

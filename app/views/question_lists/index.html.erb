@@ -1,0 +1,22 @@
+<h1>Listing question_lists</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Order</th>
+  </tr>
+
+<% @question_lists.each do |question_list| %>
+  <tr>
+    <td><%=h question_list.question %></td>
+    <td><%=h question_list.order %></td>
+    <td><%= link_to 'Show', question_list %></td>
+    <td><%= link_to 'Edit', edit_question_list_path(question_list) %></td>
+    <td><%= link_to 'Destroy', question_list, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New question_list', new_question_list_path %>

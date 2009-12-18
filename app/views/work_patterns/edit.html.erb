@@ -1,0 +1,20 @@
+<h1>Editing work_pattern</h1>
+
+<% form_for(@work_pattern) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :order %><br />
+    <%= f.text_field :order %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @work_pattern %> |
+<%= link_to 'Back', work_patterns_path %>

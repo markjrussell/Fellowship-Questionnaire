@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @work_pattern.name %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%=h @work_pattern.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_pattern_path(@work_pattern) %> |
+<%= link_to 'Back', work_patterns_path %>

@@ -1,0 +1,658 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20091217213402)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "practice_id" integer, "role" integer, "gender" integer, "work_pattern" integer, "practice_service" integer, "total_service" integer, "q1" integer, "q2" integer, "q3" integer, "q4" integer, "q5" integer, "q6" integer, "q7" integer, "q8" integer, "q9" integer, "q10" integer, "q11" integer, "q12" integer, "q13" integer, "q14" integer, "q15" integer, "q16" integer, "q17" integer, "q18" integer, "q19" integer, "q20" integer, "q21" integer, "q22" integer, "q23" integer, "q24" integer, "q25" integer, "q26" integer, "q27" integer, "q28" integer, "q29" integer, "q30" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217213402')[0m
+Migrating to CreateRoles (20091217214905)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214905')[0m
+Migrating to CreateGenders (20091217214915)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "genders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214915')[0m
+Migrating to CreateWorkPatterns (20091217214929)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "work_patterns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214929')[0m
+Migrating to CreateServiceLengths (20091217214946)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "service_lengths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214946')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("genders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("service_lengths")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("work_patterns")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-17 21:55:02) [GET]
+
+ActionController::RoutingError (No route matches "/person" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-17 21:55:07) [GET]
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/people
+Rendering people/index
+Completed in 93ms (View: 62, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-17 21:55:10) [GET]
+Rendering template within layouts/people
+Rendering people/new
+Completed in 65ms (View: 49, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20091217214905)
+Migrating to CreateGenders (20091217214915)
+Migrating to CreateWorkPatterns (20091217214929)
+Migrating to CreateServiceLengths (20091217214946)
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "people" already exists: CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "role" integer, "gender" integer, "work_pattern" integer, "practice_service" integer, "total_service" integer, "q1" integer, "q2" integer, "q3" integer, "q4" integer, "q5" integer, "q6" integer, "q7" integer, "q8" integer, "q9" integer, "q10" integer, "q11" integer, "q12" integer, "q13" integer, "q14" integer, "q15" integer, "q16" integer, "q17" integer, "q18" integer, "q19" integer, "q20" integer, "q21" integer, "q22" integer, "q23" integer, "q24" integer, "q25" integer, "q26" integer, "q27" integer, "q28" integer, "q29" integer, "q30" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20091217214905)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214905')[0m
+Migrating to CreateGenders (20091217214915)
+  [4;36;1mSQL (20.4ms)[0m   [0;1mCREATE TABLE "genders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214915')[0m
+Migrating to CreateWorkPatterns (20091217214929)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "work_patterns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214929')[0m
+Migrating to CreateServiceLengths (20091217214946)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "service_lengths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214946')[0m
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "role" integer, "gender" integer, "work_pattern" integer, "practice_service" integer, "total_service" integer, "q1" integer, "q2" integer, "q3" integer, "q4" integer, "q5" integer, "q6" integer, "q7" integer, "q8" integer, "q9" integer, "q10" integer, "q11" integer, "q12" integer, "q13" integer, "q14" integer, "q15" integer, "q16" integer, "q17" integer, "q18" integer, "q19" integer, "q20" integer, "q21" integer, "q22" integer, "q23" integer, "q24" integer, "q25" integer, "q26" integer, "q27" integer, "q28" integer, "q29" integer, "q30" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217220112')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("genders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("service_lengths")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("work_patterns")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20091217214905)
+Migrating to CreateGenders (20091217214915)
+Migrating to CreateWorkPatterns (20091217214929)
+Migrating to CreateServiceLengths (20091217214946)
+Migrating to CreatePeople (20091217220112)
+Migrating to CreateQuestionLists (20091218120745)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE TABLE "question_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091218120745')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("genders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("question_lists")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("service_lengths")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("work_patterns")[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The performance of team members is impaired by excessive workload.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.9ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The performance of team members is impaired by excessive workload.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always have enough time to complete work tasks safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members always have enough time to complete work tasks safely.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The level of staffing in the practice is sufficient to manage the workload safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The level of staffing in the practice is sufficient to manage the workload safely.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (1.0ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members feel free to question the decisions of those with more authority.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members feel free to question the decisions of those with more authority.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is open communication between team members across all levels in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (2.2ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'There is open communication between team members across all levels in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are kept up to date about practice developments.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members are kept up to date about practice developments.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership communicates its vision for the development of the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The practice leadership communicates its vision for the development of the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The hierarchy in the practice is a barrier to effective working.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The hierarchy in the practice is a barrier to effective working.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Highlighting a significant event will likely result in negative repercussions for the person raising it.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Highlighting a significant event will likely result in negative repercussions for the person raising it.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership does not deal effectively with problem team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The practice leadership does not deal effectively with problem team members.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is a low level of trust between practice team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'There is a low level of trust between practice team members.')[0m
+  [4;36;1mQuestionList Load (88.0ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice team members frequently disregard rules, protocols and procedures.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.7ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Practice team members frequently disregard rules, protocols and procedures.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members treat each other with respect.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members treat each other with respect.')[0m
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always support one another.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.5ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members always support one another.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Disagreements within the practice team are resolved appropriately.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Disagreements within the practice team are resolved appropriately.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members work well together at all levels within the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members work well together at all levels within the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice is a good place to work.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The practice is a good place to work.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are generally satisfied with their jobs.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Team members are generally satisfied with their jobs.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The need to work well as a team is promoted by the practice leadership.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The need to work well as a team is promoted by the practice leadership.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members are encouraged to highlight significant events that happen in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'All team members are encouraged to highlight significant events that happen in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice procedures help to prevent significant events from happening.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Practice procedures help to prevent significant events from happening.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Decision-making relating to the development of practice protocols uses input from all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'Decision-making relating to the development of practice protocols uses input from all team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members have the opportunity to participate in the analysis of significant events.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'All team members have the opportunity to participate in the analysis of significant events.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The quality and safety of patient care in the practice is taken seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The quality and safety of patient care in the practice is taken seriously.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice supports the continuing educational development of all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The practice supports the continuing educational development of all team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice encourages learning from the ideas and concerns of team members at all levels.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:08:01', '2009-12-18 12:08:01', NULL, 'The practice encourages learning from the ideas and concerns of team members at all levels.')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20091217214905)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214905')[0m
+Migrating to CreateGenders (20091217214915)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "genders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214915')[0m
+Migrating to CreateWorkPatterns (20091217214929)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "work_patterns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214929')[0m
+Migrating to CreateServiceLengths (20091217214946)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "service_lengths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214946')[0m
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "role" integer, "gender" integer, "work_pattern" integer, "practice_service" integer, "total_service" integer, "q1" integer, "q2" integer, "q3" integer, "q4" integer, "q5" integer, "q6" integer, "q7" integer, "q8" integer, "q9" integer, "q10" integer, "q11" integer, "q12" integer, "q13" integer, "q14" integer, "q15" integer, "q16" integer, "q17" integer, "q18" integer, "q19" integer, "q20" integer, "q21" integer, "q22" integer, "q23" integer, "q24" integer, "q25" integer, "q26" integer, "q27" integer, "q28" integer, "q29" integer, "q30" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217220112')[0m
+Migrating to CreateQuestionLists (20091218120745)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "question_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091218120745')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("genders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("question_lists")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("service_lengths")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("work_patterns")[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The performance of team members is impaired by excessive workload.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (6.9ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The performance of team members is impaired by excessive workload.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always have enough time to complete work tasks safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.7ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members always have enough time to complete work tasks safely.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The level of staffing in the practice is sufficient to manage the workload safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The level of staffing in the practice is sufficient to manage the workload safely.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members feel free to question the decisions of those with more authority.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members feel free to question the decisions of those with more authority.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is open communication between team members across all levels in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'There is open communication between team members across all levels in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are kept up to date about practice developments.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members are kept up to date about practice developments.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership communicates its vision for the development of the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The practice leadership communicates its vision for the development of the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The hierarchy in the practice is a barrier to effective working.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The hierarchy in the practice is a barrier to effective working.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Highlighting a significant event will likely result in negative repercussions for the person raising it.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Highlighting a significant event will likely result in negative repercussions for the person raising it.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership does not deal effectively with problem team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The practice leadership does not deal effectively with problem team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is a low level of trust between practice team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'There is a low level of trust between practice team members.')[0m
+  [4;36;1mQuestionList Load (114.6ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice team members frequently disregard rules, protocols and procedures.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.7ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Practice team members frequently disregard rules, protocols and procedures.')[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members treat each other with respect.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.7ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members treat each other with respect.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always support one another.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members always support one another.')[0m
+  [4;36;1mQuestionList Load (0.9ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Disagreements within the practice team are resolved appropriately.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Disagreements within the practice team are resolved appropriately.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members work well together at all levels within the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members work well together at all levels within the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice is a good place to work.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The practice is a good place to work.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are generally satisfied with their jobs.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Team members are generally satisfied with their jobs.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The need to work well as a team is promoted by the practice leadership.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The need to work well as a team is promoted by the practice leadership.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members are encouraged to highlight significant events that happen in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'All team members are encouraged to highlight significant events that happen in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice procedures help to prevent significant events from happening.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Practice procedures help to prevent significant events from happening.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Decision-making relating to the development of practice protocols uses input from all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'Decision-making relating to the development of practice protocols uses input from all team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members have the opportunity to participate in the analysis of significant events.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'All team members have the opportunity to participate in the analysis of significant events.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The quality and safety of patient care in the practice is taken seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The quality and safety of patient care in the practice is taken seriously.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice supports the continuing educational development of all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The practice supports the continuing educational development of all team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice encourages learning from the ideas and concerns of team members at all levels.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:10:01', '2009-12-18 12:10:01', NULL, 'The practice encourages learning from the ideas and concerns of team members at all levels.')[0m
+  [4;36;1mQuestionList Load (0.5ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The performance of team members is impaired by excessive workload.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always have enough time to complete work tasks safely.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The level of staffing in the practice is sufficient to manage the workload safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members feel free to question the decisions of those with more authority.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is open communication between team members across all levels in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are kept up to date about practice developments.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership communicates its vision for the development of the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The hierarchy in the practice is a barrier to effective working.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Highlighting a significant event will likely result in negative repercussions for the person raising it.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership does not deal effectively with problem team members.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is a low level of trust between practice team members.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice team members frequently disregard rules, protocols and procedures.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members treat each other with respect.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always support one another.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Disagreements within the practice team are resolved appropriately.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members work well together at all levels within the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice is a good place to work.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are generally satisfied with their jobs.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The need to work well as a team is promoted by the practice leadership.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members are encouraged to highlight significant events that happen in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice procedures help to prevent significant events from happening.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Decision-making relating to the development of practice protocols uses input from all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members have the opportunity to participate in the analysis of significant events.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The quality and safety of patient care in the practice is taken seriously.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice supports the continuing educational development of all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice encourages learning from the ideas and concerns of team members at all levels.') LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mRole Create (0.9ms)[0m   [0mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Practice manager', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Medical Doctor', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Practice nurse', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Health visitor') LIMIT 1[0m
+  [4;36;1mRole Create (0.6ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Health visitor', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Administration/Reception', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Phlebotomist', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Pharmacist', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;36;1mRole Create (0.6ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Allied Healthcare Professional', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Other') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Other', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mServiceLength Load (0.3ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mServiceLength Create (0.6ms)[0m   [0;1mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Practice manager', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.2ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Medical Doctor', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Practice nurse', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.2ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Health visitor') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Health visitor', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Administration/Reception', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.2ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Phlebotomist', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Pharmacist', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.2ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;35;1mServiceLength Create (1.0ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Allied Healthcare Professional', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Other') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Other', '2009-12-18 12:11:46', '2009-12-18 12:11:46', NULL)[0m
+  [4;36;1mQuestionList Load (0.5ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The performance of team members is impaired by excessive workload.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always have enough time to complete work tasks safely.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The level of staffing in the practice is sufficient to manage the workload safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members feel free to question the decisions of those with more authority.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is open communication between team members across all levels in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are kept up to date about practice developments.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership communicates its vision for the development of the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The hierarchy in the practice is a barrier to effective working.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Highlighting a significant event will likely result in negative repercussions for the person raising it.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership does not deal effectively with problem team members.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is a low level of trust between practice team members.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice team members frequently disregard rules, protocols and procedures.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members treat each other with respect.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always support one another.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Disagreements within the practice team are resolved appropriately.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members work well together at all levels within the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice is a good place to work.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are generally satisfied with their jobs.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The need to work well as a team is promoted by the practice leadership.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members are encouraged to highlight significant events that happen in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice procedures help to prevent significant events from happening.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Decision-making relating to the development of practice protocols uses input from all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members have the opportunity to participate in the analysis of significant events.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The quality and safety of patient care in the practice is taken seriously.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice supports the continuing educational development of all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice encourages learning from the ideas and concerns of team members at all levels.') LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Health visitor') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Other') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.5ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Health visitor') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Other') LIMIT 1[0m
+  [4;36;1mGender Load (0.3ms)[0m   [0;1mSELECT * FROM "genders" WHERE ("genders"."name" = 'Male') LIMIT 1[0m
+  [4;35;1mGender Create (0.9ms)[0m   [0mINSERT INTO "genders" ("name", "created_at", "updated_at", "order") VALUES('Male', '2009-12-18 12:12:01', '2009-12-18 12:12:01', NULL)[0m
+  [4;36;1mGender Load (0.3ms)[0m   [0;1mSELECT * FROM "genders" WHERE ("genders"."name" = 'Female') LIMIT 1[0m
+  [4;35;1mGender Create (0.4ms)[0m   [0mINSERT INTO "genders" ("name", "created_at", "updated_at", "order") VALUES('Female', '2009-12-18 12:12:01', '2009-12-18 12:12:01', NULL)[0m
+  [4;36;1mWorkPattern Load (0.3ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Full Time') LIMIT 1[0m
+  [4;35;1mWorkPattern Create (0.6ms)[0m   [0mINSERT INTO "work_patterns" ("name", "created_at", "updated_at", "order") VALUES('Full Time', '2009-12-18 12:12:01', '2009-12-18 12:12:01', NULL)[0m
+  [4;36;1mWorkPattern Load (0.3ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Part Time') LIMIT 1[0m
+  [4;35;1mWorkPattern Create (0.4ms)[0m   [0mINSERT INTO "work_patterns" ("name", "created_at", "updated_at", "order") VALUES('Part Time', '2009-12-18 12:12:01', '2009-12-18 12:12:01', NULL)[0m
+  [4;36;1mWorkPattern Load (0.3ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Locum') LIMIT 1[0m
+  [4;35;1mWorkPattern Create (0.4ms)[0m   [0mINSERT INTO "work_patterns" ("name", "created_at", "updated_at", "order") VALUES('Locum', '2009-12-18 12:12:01', '2009-12-18 12:12:01', NULL)[0m
+  [4;36;1mQuestionList Load (0.5ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The performance of team members is impaired by excessive workload.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always have enough time to complete work tasks safely.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The level of staffing in the practice is sufficient to manage the workload safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members feel free to question the decisions of those with more authority.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is open communication between team members across all levels in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are kept up to date about practice developments.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership communicates its vision for the development of the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The hierarchy in the practice is a barrier to effective working.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Highlighting a significant event will likely result in negative repercussions for the person raising it.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership does not deal effectively with problem team members.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is a low level of trust between practice team members.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice team members frequently disregard rules, protocols and procedures.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members treat each other with respect.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always support one another.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Disagreements within the practice team are resolved appropriately.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members work well together at all levels within the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice is a good place to work.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are generally satisfied with their jobs.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The need to work well as a team is promoted by the practice leadership.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members are encouraged to highlight significant events that happen in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice procedures help to prevent significant events from happening.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Decision-making relating to the development of practice protocols uses input from all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members have the opportunity to participate in the analysis of significant events.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The quality and safety of patient care in the practice is taken seriously.') LIMIT 1[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice supports the continuing educational development of all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Load (0.4ms)[0m   [0mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice encourages learning from the ideas and concerns of team members at all levels.') LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Health visitor') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Other') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.5ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Health visitor') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.4ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;35;1mServiceLength Load (0.4ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Other') LIMIT 1[0m
+  [4;36;1mGender Load (0.5ms)[0m   [0;1mSELECT * FROM "genders" WHERE ("genders"."name" = 'Male') LIMIT 1[0m
+  [4;35;1mGender Load (0.4ms)[0m   [0mSELECT * FROM "genders" WHERE ("genders"."name" = 'Female') LIMIT 1[0m
+  [4;36;1mWorkPattern Load (0.5ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Full Time') LIMIT 1[0m
+  [4;35;1mWorkPattern Load (0.4ms)[0m   [0mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Part Time') LIMIT 1[0m
+  [4;36;1mWorkPattern Load (0.4ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Locum') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRoles (20091217214905)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214905')[0m
+Migrating to CreateGenders (20091217214915)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "genders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214915')[0m
+Migrating to CreateWorkPatterns (20091217214929)
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "work_patterns" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214929')[0m
+Migrating to CreateServiceLengths (20091217214946)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "service_lengths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217214946')[0m
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "role" integer, "gender" integer, "work_pattern" integer, "practice_service" integer, "total_service" integer, "q1" integer, "q2" integer, "q3" integer, "q4" integer, "q5" integer, "q6" integer, "q7" integer, "q8" integer, "q9" integer, "q10" integer, "q11" integer, "q12" integer, "q13" integer, "q14" integer, "q15" integer, "q16" integer, "q17" integer, "q18" integer, "q19" integer, "q20" integer, "q21" integer, "q22" integer, "q23" integer, "q24" integer, "q25" integer, "q26" integer, "q27" integer, "q28" integer, "q29" integer, "q30" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217220112')[0m
+Migrating to CreateQuestionLists (20091218120745)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "question_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091218120745')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("genders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("question_lists")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("service_lengths")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("work_patterns")[0m
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The performance of team members is impaired by excessive workload.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.9ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The performance of team members is impaired by excessive workload.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always have enough time to complete work tasks safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members always have enough time to complete work tasks safely.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The level of staffing in the practice is sufficient to manage the workload safely.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The level of staffing in the practice is sufficient to manage the workload safely.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'When pressure builds up, team members are expected to work faster even if it means taking shortcuts.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members feel free to question the decisions of those with more authority.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members feel free to question the decisions of those with more authority.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members are comfortable in expressing concerns to the practice leadership about the way things are done in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is open communication between team members across all levels in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'There is open communication between team members across all levels in the practice.')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are kept up to date about practice developments.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members are kept up to date about practice developments.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership communicates its vision for the development of the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The practice leadership communicates its vision for the development of the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The hierarchy in the practice is a barrier to effective working.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The hierarchy in the practice is a barrier to effective working.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Highlighting a significant event will likely result in negative repercussions for the person raising it.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Highlighting a significant event will likely result in negative repercussions for the person raising it.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice leadership does not deal effectively with problem team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The practice leadership does not deal effectively with problem team members.')[0m
+  [4;36;1mQuestionList Load (88.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.7ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'When team members suggest ways to improve how things are done, the practice leadership does not take this seriously.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'There is a low level of trust between practice team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.5ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'There is a low level of trust between practice team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice team members frequently disregard rules, protocols and procedures.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.5ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Practice team members frequently disregard rules, protocols and procedures.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members treat each other with respect.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members treat each other with respect.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members always support one another.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members always support one another.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Disagreements within the practice team are resolved appropriately.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Disagreements within the practice team are resolved appropriately.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members work well together at all levels within the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members work well together at all levels within the practice.')[0m
+  [4;36;1mQuestionList Load (0.5ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice is a good place to work.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The practice is a good place to work.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Team members are generally satisfied with their jobs.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Team members are generally satisfied with their jobs.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The need to work well as a team is promoted by the practice leadership.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.5ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The need to work well as a team is promoted by the practice leadership.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members are encouraged to highlight significant events that happen in the practice.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'All team members are encouraged to highlight significant events that happen in the practice.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Practice procedures help to prevent significant events from happening.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Practice procedures help to prevent significant events from happening.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Decision-making relating to the development of practice protocols uses input from all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'Decision-making relating to the development of practice protocols uses input from all team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The practice takes the time to formally assess risks (e.g. to patients, to team members and to the practice).')[0m
+  [4;36;1mQuestionList Load (0.8ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'All team members have the opportunity to participate in the analysis of significant events.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.6ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'All team members have the opportunity to participate in the analysis of significant events.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The quality and safety of patient care in the practice is taken seriously.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The quality and safety of patient care in the practice is taken seriously.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice supports the continuing educational development of all team members.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The practice supports the continuing educational development of all team members.')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'The practice encourages learning from the ideas and concerns of team members at all levels.') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL, 'The practice encourages learning from the ideas and concerns of team members at all levels.')[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mRole Create (0.4ms)[0m   [0mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Practice manager', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice manager') LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Medical Doctor', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Practice nurse', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Health visitor') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Health visitor', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Administration/Reception', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Phlebotomist', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Pharmacist', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Allied Healthcare Professional', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."name" = 'Other') LIMIT 1[0m
+  [4;36;1mRole Create (0.4ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "order") VALUES('Other', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mServiceLength Load (0.3ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mServiceLength Create (0.6ms)[0m   [0;1mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Practice manager', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;35;1mServiceLength Load (0.5ms)[0m   [0mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice manager') LIMIT 1[0m
+  [4;36;1mServiceLength Load (0.2ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Medical Doctor') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Medical Doctor', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Practice nurse') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Practice nurse', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Health visitor') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Health visitor', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Administration/Reception') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Administration/Reception', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Phlebotomist') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Phlebotomist', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Pharmacist') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Pharmacist', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Allied Healthcare Professional') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Allied Healthcare Professional', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mServiceLength Load (0.3ms)[0m   [0;1mSELECT * FROM "service_lengths" WHERE ("service_lengths"."name" = 'Other') LIMIT 1[0m
+  [4;35;1mServiceLength Create (0.4ms)[0m   [0mINSERT INTO "service_lengths" ("name", "created_at", "updated_at", "order") VALUES('Other', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mGender Load (0.3ms)[0m   [0;1mSELECT * FROM "genders" WHERE ("genders"."name" = 'Male') LIMIT 1[0m
+  [4;35;1mGender Create (0.4ms)[0m   [0mINSERT INTO "genders" ("name", "created_at", "updated_at", "order") VALUES('Male', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mGender Load (0.3ms)[0m   [0;1mSELECT * FROM "genders" WHERE ("genders"."name" = 'Female') LIMIT 1[0m
+  [4;35;1mGender Create (0.6ms)[0m   [0mINSERT INTO "genders" ("name", "created_at", "updated_at", "order") VALUES('Female', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mWorkPattern Load (0.3ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Full Time') LIMIT 1[0m
+  [4;35;1mWorkPattern Create (0.4ms)[0m   [0mINSERT INTO "work_patterns" ("name", "created_at", "updated_at", "order") VALUES('Full Time', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mWorkPattern Load (0.3ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Part Time') LIMIT 1[0m
+  [4;35;1mWorkPattern Create (0.4ms)[0m   [0mINSERT INTO "work_patterns" ("name", "created_at", "updated_at", "order") VALUES('Part Time', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m
+  [4;36;1mWorkPattern Load (0.3ms)[0m   [0;1mSELECT * FROM "work_patterns" WHERE ("work_patterns"."name" = 'Locum') LIMIT 1[0m
+  [4;35;1mWorkPattern Create (0.4ms)[0m   [0mINSERT INTO "work_patterns" ("name", "created_at", "updated_at", "order") VALUES('Locum', '2009-12-18 12:15:13', '2009-12-18 12:15:13', NULL)[0m

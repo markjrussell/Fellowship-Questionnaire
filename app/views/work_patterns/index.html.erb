@@ -1,0 +1,22 @@
+<h1>Listing work_patterns</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Order</th>
+  </tr>
+
+<% @work_patterns.each do |work_pattern| %>
+  <tr>
+    <td><%=h work_pattern.name %></td>
+    <td><%=h work_pattern.order %></td>
+    <td><%= link_to 'Show', work_pattern %></td>
+    <td><%= link_to 'Edit', edit_work_pattern_path(work_pattern) %></td>
+    <td><%= link_to 'Destroy', work_pattern, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New work_pattern', new_work_pattern_path %>
