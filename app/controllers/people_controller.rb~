@@ -38,7 +38,7 @@ class PeopleController < ApplicationController
 		@gender = Gender.all
 		@workpattern = WorkPattern.all
 		@servicelength = ServiceLength.all
-		@questionlist = QuestionList.all
+
     @person = Person.find(params[:id])
   end
 

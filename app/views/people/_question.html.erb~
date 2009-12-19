@@ -1,0 +1,21 @@
+<table class="questiontable">
+		<% 1.upto(4) do |count| %>
+			<tr class="alternatingtable<%= count % 2 %>">
+				<td class="question"><%= @questionlist.at(count-1).question %></td>
+				<td class="radiokeyleft">
+					not at all
+				</td>
+
+				<td class="radioicons">
+					<% 1.upto(7) do |radio_num| %>
+						<%= radio_button("person", "q" + count.to_s, radio_num ) %>
+					<% end %>
+				</td>
+
+				<td class="radiokeyright">						
+					to a very great extent
+				</td>
+
+			</tr>
+		<% end %>
+</table>

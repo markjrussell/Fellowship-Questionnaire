@@ -55,7 +55,6 @@
 	<div id="page2">
 		<fieldset>
 		<legend>Safety Systems and Learning</legend>	
-			<%= render :partial => "question", :locals => {:start_question => 23, :end_question => 30} %>
 		</fieldset>
 	</div>
 
