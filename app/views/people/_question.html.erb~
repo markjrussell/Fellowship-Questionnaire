@@ -1,5 +1,5 @@
 <table class="questiontable">
-		<% 1.upto(4) do |count| %>
+		<% start_question.upto(end_question) do |count| %>
 			<tr class="alternatingtable<%= count % 2 %>">
 				<td class="question"><%= @questionlist.at(count-1).question %></td>
 				<td class="radiokeyleft">
