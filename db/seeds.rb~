@@ -74,8 +74,8 @@ end
 
 #####################################   gender   #####################################################################
 
-gender =["Male"]
-gender << "Female"
+genders =["Male"]
+genders << "Female"
 
 genders.each do |t|  
        Gender.find_or_create_by_name t  

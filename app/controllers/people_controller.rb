@@ -39,7 +39,7 @@ class PeopleController < ApplicationController
 		@workpattern = WorkPattern.all
 		@servicelength = ServiceLength.all
 		@questionlist = QuestionList.all
-    @person = Person.find(params[:id])
+    @person = Person.find_by_userhash(params[:hash])
   end
 
   # POST /people
@@ -48,7 +48,7 @@ class PeopleController < ApplicationController
     @person = Person.new(params[:person])
 
     respond_to do |format|
-      if @person.save
+      if @person.save_with_validation(false)           #turn off validations - should only be on for editing
         flash[:notice] = 'Person was successfully created.'
         format.html { redirect_to(@person) }
         format.xml  { render :xml => @person, :status => :created, :location => @person }

@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :roles
 
   map.resources :people
-  map.connect 'people/edit/:hash', :controller => 'people', :action => 'edit'
+  map.connect ':people/:edit/:hash'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

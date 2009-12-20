@@ -68,7 +68,7 @@ sl << "5 – 10 years"
 sl << "10 – 20 years"
 sl << "> 20 years"
 
-roles.each do |t|  
+sl.each do |t|  
        ServiceLength.find_or_create_by_name t  
 end  
 

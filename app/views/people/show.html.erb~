@@ -4,12 +4,6 @@
 </p>
 
 <p>
-  <b>Userhash:</b>
-  <%=h @person.userhash %>
-</p>
-
-
-<p>
   <b>Role:</b>
   <%=h @person.role %>
 </p>

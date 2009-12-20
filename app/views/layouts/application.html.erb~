@@ -13,17 +13,10 @@
 
 	<div id="topbar">
 		<img id="logo" src="/images/nhs.gif" alt="NHS Education for Scotland Logo">
-		<img src="/images/ttpp.gif" alt="Trigger Tool Pilot Project">
+		<img src="/images/safequest.gif" alt="SafeQuest">
 	</div>
 	
 	<div id="menu">
-		<ul>
-			<li>Login</li>
-			<li>Guidance</li>
-			<li>Enter Data</li>
-			<li>Review Data</li>
-			<li>Analyse Data</li>
-		</ul>
 	</div>
 	
 	<div id="content">
