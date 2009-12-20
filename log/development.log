@@ -5957,3 +5957,103 @@ Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 12:03:34) [GET]
 Rendering template within layouts/application
 Rendering people/show
 Completed in 31ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/people/8]
+  [4;36;1mSQL (2.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPerson Load (3.3ms)[0m   [0mSELECT * FROM "people" [0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-20 14:41:16) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mRole Load (1.7ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mGender Load (0.6ms)[0m   [0;1mSELECT * FROM "genders" [0m
+  [4;35;1mWorkPattern Load (0.6ms)[0m   [0mSELECT * FROM "work_patterns" [0m
+  [4;36;1mServiceLength Load (0.8ms)[0m   [0;1mSELECT * FROM "service_lengths" [0m
+  [4;35;1mQuestionList Load (3.1ms)[0m   [0mSELECT * FROM "question_lists" [0m
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."userhash" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (16.1ms)
+Rendered people/_question (13.0ms)
+Rendered people/_question (15.4ms)
+Rendered people/_question (21.0ms)
+Rendered people/_question (21.4ms)
+Completed in 166ms (View: 121, DB: 8) | 200 OK [http://127.0.0.1/people/8/edit]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2009-12-20 14:41:23) [PUT]
+  Parameters: {"commit"=>"Update", "#<Person:0xb660ca50>"=>{"work_pattern"=>"", "role"=>"", "gender"=>"", "total_service"=>"", "practice_service"=>""}, "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"4"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #10 of app/views/people/edit.html.erb:
+7: 	<legend>About You</legend>
+8:   <p>
+9:     <%= f.label "Your Role" %><br />
+10:     <%= collection_select(@person, 'role', @roles, 'id', 'name',{:prompt => ""}) %>
+11:   </p>
+12:   <p>
+13:     <%= f.label :gender %><br />
+
+    app/views/people/edit.html.erb:10
+    app/views/people/edit.html.erb:3
+    app/controllers/people_controller.rb:73:in `update'
+    app/controllers/people_controller.rb:67:in `update'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-20 14:42:24) [GET]
+  Parameters: {"hash"=>"claire"}
+  [4;36;1mRole Load (1.7ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mGender Load (0.6ms)[0m   [0mSELECT * FROM "genders" [0m
+  [4;36;1mWorkPattern Load (0.7ms)[0m   [0;1mSELECT * FROM "work_patterns" [0m
+  [4;35;1mServiceLength Load (0.9ms)[0m   [0mSELECT * FROM "service_lengths" [0m
+  [4;36;1mQuestionList Load (3.1ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'claire') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (13.3ms)
+Rendered people/_question (14.3ms)
+Rendered people/_question (16.2ms)
+Rendered people/_question (18.4ms)
+Rendered people/_question (21.0ms)
+Completed in 171ms (View: 122, DB: 8) | 200 OK [http://127.0.0.1/people/edit/claire]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2009-12-20 14:42:31) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"3", "#<Person:0xb68d78ac>"=>{"work_pattern"=>"", "role"=>"", "gender"=>"", "total_service"=>"", "practice_service"=>""}}
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Redirected to http://127.0.0.1:3000/people/3
+Completed in 28ms (DB: 1) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 14:42:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPerson Load (1.1ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 29ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 14:43:39) [GET]
+  [4;36;1mPerson Load (8.3ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 74ms (View: 56, DB: 8) | 200 OK [http://127.0.0.1/people]

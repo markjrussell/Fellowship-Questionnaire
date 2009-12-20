@@ -1,7 +1,7 @@
 class Person < ActiveRecord::Base
 
 	#validate presence of all columns, except id
-	#validates_presence_of(self.class.column_names - ["id"])
+	#validates_presence_of(self.column_names - ["id"])
 
 	
 	def email
