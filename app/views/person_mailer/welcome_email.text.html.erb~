@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>  
+<head>  
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />  
+</head>  
+
+<body>  
+<p>Your practice is participating in a General Practice Safety Programme.</p>
+<p>As one of the parts of this programme, 
+we ask all members of participant practices to fill in a short online questionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, 
+and although a report will be given to the practice, 
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href="http://safequest.itforgp.com/people/edit/<%= @person.userhash %>">click this link</a>, 
+or copy the link below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/<%= @person.userhash %></p>
+</body> 
+</html> 

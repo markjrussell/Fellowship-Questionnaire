@@ -5,9 +5,11 @@ class Person < ActiveRecord::Base
 
 	
 	def email
+		@email
 	end
 
 	def email=(user_email)
+		@email=user_email
 		self.userhash=Digest::SHA1.hexdigest("mark2009safety"+user_email)
 	end
 end

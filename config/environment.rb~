@@ -48,7 +48,7 @@ Rails::Initializer.run do |config|
 		  :port           => 587,
 		  :domain         => 'itforgp.com',
 		  :authentication => :plain,
-		  :user_name      => 'safequest@itforgp.com',
-		  :password       => 'Sn9DGIwM'
+		  :user_name      => 'markjrussell@gmail.com',
+		  :password       => 'c123laire'
 	}
 end

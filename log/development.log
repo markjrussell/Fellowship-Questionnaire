@@ -6057,3 +6057,1254 @@ Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 14:43:39) [GET]
 Rendering template within layouts/application
 Rendering people/index
 Completed in 74ms (View: 56, DB: 8) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 20:29:53) [GET]
+  [4;35;1mPerson Load (4.8ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 77ms (View: 61, DB: 5) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-20 20:29:56) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 33ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 20:30:05) [POST]
+  Parameters: {"person"=>{"email"=>"john@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (14.9ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:30:05', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:30:05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '77f3703f7875b7a71b8c19e4aaead435095098b3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Redirected to http://127.0.0.1:3000/people/9
+Completed in 43ms (DB: 15) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 20:30:05) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mPerson Load (1.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 35ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/people/9]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-20 20:32:07) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 100ms (View: 87, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 20:32:18) [POST]
+  Parameters: {"person"=>{"email"=>"test"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (5.2ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:32:18', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:32:18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '854871df84daf79a425fb99861ed94c74d2fcfbb', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+
+SyntaxError (/home/sparky/Rails Dev/safequest/app/models/person_mailer.rb:8: syntax error, unexpected tASSOC, expecting '}'
+		body 				{:person => person, :url => "http://example.com/login"} 
+		     				           ^
+/home/sparky/Rails Dev/safequest/app/models/person_mailer.rb:8: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+		body 				{:person => person, :url => "http://example.com/login"} 
+		     				                           ^):
+  app/models/person_observer.rb:3:in `after_create'
+  /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+  /usr/lib/ruby/1.8/observer.rb:184:in `each'
+  /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+  app/controllers/people_controller.rb:51:in `create'
+  app/controllers/people_controller.rb:50:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.3ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 20:33:07) [POST]
+  Parameters: {"person"=>{"email"=>"test"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (6.1ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:33:07', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:33:07', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '854871df84daf79a425fb99861ed94c74d2fcfbb', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+
+SyntaxError (/home/sparky/Rails Dev/safequest/app/models/person_mailer.rb:8: syntax error, unexpected tASSOC, expecting '}'
+		body 				{:url => "http://example.com/login"} 
+		     				        ^):
+  app/models/person_observer.rb:3:in `after_create'
+  /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+  /usr/lib/ruby/1.8/observer.rb:184:in `each'
+  /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+  app/controllers/people_controller.rb:51:in `create'
+  app/controllers/people_controller.rb:50:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.8ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 20:35:05) [POST]
+  Parameters: {"person"=>{"email"=>"test"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (4.7ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:35:05', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:35:05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '854871df84daf79a425fb99861ed94c74d2fcfbb', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 20:35:05 +0000
+From: My Awesome Site Notifications <notifications@example.com>
+To: mark@russell.name
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2e8a79daa69_280a..fdb45c04e1da
+
+
+--mimepart_4b2e8a79daa69_280a..fdb45c04e1da
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<h1>Welcome to example.com</h1>  =
+
+<p>You have successfully signed up to example.com.
+<br/>To login to the site, just follow this link:. </p>  =
+
+<p>Thanks for joining and have a great day!</p>  =
+
+</body> =
+
+</html> =
+
+
+--mimepart_4b2e8a79daa69_280a..fdb45c04e1da--
+Redirected to http://127.0.0.1:3000/people/12
+Completed in 1195ms (DB: 5) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 20:35:07) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 54ms (View: 40, DB: 1) | 200 OK [http://127.0.0.1/people/12]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 20:43:02) [GET]
+  [4;36;1mPerson Load (6.3ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 162ms (View: 144, DB: 6) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-20 20:43:05) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 36ms (View: 24, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 20:43:09) [POST]
+  Parameters: {"person"=>{"email"=>"test 2"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (4.0ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:43:09', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:43:09', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '4279efe7cbcc4abab01620c4b23c2968dc12e42a', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 20:43:09 +0000
+From: My Awesome Site Notifications <notifications@example.com>
+To: mark@russell.name
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2e8c5daa7dc_28fa..fdba26d761bf
+
+
+--mimepart_4b2e8c5daa7dc_28fa..fdba26d761bf
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<h1>Welcome to example.com</h1>  =
+
+<p>You have successfully signed up to example.com.
+<br/>To login to the site, just follow this link:. </p>  =
+
+<p>Thanks for joining and have a great day!</p>  =
+
+</body> =
+
+</html> =
+
+
+--mimepart_4b2e8c5daa7dc_28fa..fdba26d761bf--
+Redirected to http://127.0.0.1:3000/people/13
+Completed in 762ms (DB: 4) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 20:43:10) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 79ms (View: 66, DB: 1) | 200 OK [http://127.0.0.1/people/13]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 20:52:07) [POST]
+  Parameters: {"person"=>{"email"=>"test 3"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (7.0ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:52:07', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 20:52:07', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'fb16562cfabc1a9847a017472f7614cf39eb7e0a', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 20:52:07 +0000
+From: Mark Russell <markjrussell@gmail.com>
+To: mark@russell.name
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2e8e77de800_29ce..fdbaa0d42132
+
+
+--mimepart_4b2e8e77de800_29ce..fdbaa0d42132
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<h1>This is a test email</h1>  =
+
+</body> =
+
+</html> =
+
+
+--mimepart_4b2e8e77de800_29ce..fdbaa0d42132--
+Redirected to http://127.0.0.1:3000/people/14
+Completed in 985ms (DB: 7) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 20:52:08) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mPerson Load (1.1ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 49ms (View: 34, DB: 1) | 200 OK [http://127.0.0.1/people/14]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:00:04) [GET]
+  [4;36;1mPerson Load (6.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 163ms (View: 142, DB: 6) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:00:12) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"3"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+  [4;36;1mPerson Destroy (39.1ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 104ms (DB: 40) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:00:13) [GET]
+  [4;35;1mPerson Load (8.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 157ms (View: 134, DB: 8) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:00:20) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"4"}
+  [4;36;1mPerson Load (149.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 4) [0m
+  [4;35;1mPerson Destroy (0.5ms)[0m   [0mDELETE FROM "people" WHERE "id" = 4[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 229ms (DB: 150) | 302 Found [http://127.0.0.1/people/4]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:00:20) [GET]
+  [4;36;1mPerson Load (13.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 166ms (View: 137, DB: 13) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:00:25) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"5"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 5) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 5[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 76ms (DB: 2) | 302 Found [http://127.0.0.1/people/5]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:00:26) [GET]
+  [4;35;1mPerson Load (7.1ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 118ms (View: 103, DB: 7) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:00:32) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"7"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 7) [0m
+  [4;35;1mPerson Destroy (0.6ms)[0m   [0mDELETE FROM "people" WHERE "id" = 7[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 86ms (DB: 2) | 302 Found [http://127.0.0.1/people/7]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:00:33) [GET]
+  [4;36;1mPerson Load (7.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 276ms (View: 262, DB: 7) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:00:39) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"9"}
+  [4;35;1mPerson Load (47.1ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 9) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 9[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 72ms (DB: 48) | 302 Found [http://127.0.0.1/people/9]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:00:39) [GET]
+  [4;35;1mPerson Load (11.6ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 101ms (View: 83, DB: 12) | 200 OK [http://127.0.0.1/people]
+  [4;36;1mPerson Load (4.4ms)[0m   [0;1mSELECT * FROM "people" [0m
+  [4;35;1mPerson Load (3.7ms)[0m   [0mSELECT * FROM "people" [0m
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:02:44) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"6"}
+  [4;36;1mPerson Load (28.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 6) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 6[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 76ms (DB: 29) | 302 Found [http://127.0.0.1/people/6]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:02:44) [GET]
+  [4;36;1mPerson Load (3.9ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 83ms (View: 73, DB: 4) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:03:01) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"8"}
+  [4;35;1mPerson Load (29.9ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 8) [0m
+  [4;36;1mPerson Destroy (0.5ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 8[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 103ms (DB: 30) | 302 Found [http://127.0.0.1/people/8]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:03:01) [GET]
+  [4;35;1mPerson Load (11.3ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 87ms (View: 68, DB: 11) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:03:34) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"10"}
+  [4;36;1mPerson Load (1.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 10) [0m
+  [4;35;1mPerson Destroy (0.5ms)[0m   [0mDELETE FROM "people" WHERE "id" = 10[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 96ms (DB: 2) | 302 Found [http://127.0.0.1/people/10]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:03:34) [GET]
+  [4;36;1mPerson Load (2.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 64ms (View: 50, DB: 3) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:03:39) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"11"}
+  [4;35;1mPerson Load (2.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 11) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 11[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 85ms (DB: 3) | 302 Found [http://127.0.0.1/people/11]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:03:39) [GET]
+  [4;35;1mPerson Load (6.3ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 64ms (View: 50, DB: 6) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:03:51) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"12"}
+  [4;36;1mPerson Load (2.5ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 12) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 12[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 229ms (DB: 3) | 302 Found [http://127.0.0.1/people/12]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:03:52) [GET]
+  [4;36;1mPerson Load (2.2ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 75ms (View: 61, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:03:58) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"13"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 13) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 13[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 90ms (DB: 2) | 302 Found [http://127.0.0.1/people/13]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:03:58) [GET]
+  [4;35;1mPerson Load (1.8ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 42ms (View: 35, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 21:04:03) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"14"}
+  [4;36;1mPerson Load (47.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 14) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 14[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 79ms (DB: 48) | 302 Found [http://127.0.0.1/people/14]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 21:04:03) [GET]
+  [4;36;1mPerson Load (4.3ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 15ms (View: 5, DB: 4) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-20 21:04:05) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 158ms (View: 146, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 21:04:11) [POST]
+  Parameters: {"person"=>{"email"=>"Test4"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (6.4ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 21:04:11', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 21:04:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '9be0772b59edaac728caa826d264f24a75033454', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 21:04:11 +0000
+From: Mark Russell <markjrussell@gmail.com>
+To: mark@russell.name
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2e914b88eb4_2a00..fdb4fa78012e
+
+
+--mimepart_4b2e914b88eb4_2a00..fdb4fa78012e
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<h1>This is a test email</h1>  =
+
+</body> =
+
+</html> =
+
+
+--mimepart_4b2e914b88eb4_2a00..fdb4fa78012e--
+
+Net::SMTPFatalError (555 5.5.2 Syntax error. 7sm9426759eyg.1
+):
+  /usr/lib/ruby/1.8/net/smtp.rb:930:in `check_response'
+  /usr/lib/ruby/1.8/net/smtp.rb:899:in `getok'
+  /usr/lib/ruby/1.8/net/smtp.rb:828:in `mailfrom'
+  /usr/lib/ruby/1.8/net/smtp.rb:653:in `sendmail'
+  /usr/lib/ruby/1.8/net/smtp.rb:526:in `start'
+  app/models/person_observer.rb:3:in `after_create'
+  /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+  /usr/lib/ruby/1.8/observer.rb:184:in `each'
+  /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+  app/controllers/people_controller.rb:51:in `create'
+  app/controllers/people_controller.rb:50:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.6ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 21:07:41) [POST]
+  Parameters: {"person"=>{"email"=>"Test4"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (5.9ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 21:07:41', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 21:07:41', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '9be0772b59edaac728caa826d264f24a75033454', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 21:07:41 +0000
+From: markjrussell@gmail.com
+To: mark@russell.name
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2e921dc20fd_2a00..fdb479ac246a
+
+
+--mimepart_4b2e921dc20fd_2a00..fdb479ac246a
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<h1>This is a test email</h1>  =
+
+</body> =
+
+</html> =
+
+
+--mimepart_4b2e921dc20fd_2a00..fdb479ac246a--
+Redirected to http://127.0.0.1:3000/people/16
+Completed in 2865ms (DB: 6) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 21:07:44) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 16) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 45ms (View: 30, DB: 1) | 200 OK [http://127.0.0.1/people/16]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 21:59:55) [POST]
+  Parameters: {"person"=>{"email"=>"Test4"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (5.6ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 21:59:55', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 21:59:55', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '9be0772b59edaac728caa826d264f24a75033454', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 21:59:55 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2e9e5bc507d_2f04..fdb9cbdfe14a
+
+
+--mimepart_4b2e9e5bc507d_2f04..fdb9cbdfe14a
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<h1>This is a test email</h1>  =
+
+</body> =
+
+</html> =
+
+
+--mimepart_4b2e9e5bc507d_2f04..fdb9cbdfe14a--
+Redirected to http://127.0.0.1:3000/people/17
+Completed in 2814ms (DB: 6) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 21:59:58) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 51ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/people/17]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 22:01:14) [GET]
+  [4;36;1mPerson Load (2.5ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 63ms (View: 54, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 22:01:57) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"15"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 15) [0m
+  [4;36;1mPerson Destroy (0.5ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 15[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 24ms (DB: 2) | 302 Found [http://127.0.0.1/people/15]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 22:01:57) [GET]
+  [4;35;1mPerson Load (2.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 61ms (View: 51, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 22:02:06) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"17"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 17) [0m
+  [4;35;1mPerson Destroy (3.3ms)[0m   [0mDELETE FROM "people" WHERE "id" = 17[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 72ms (DB: 5) | 302 Found [http://127.0.0.1/people/17]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 22:02:06) [GET]
+  [4;36;1mPerson Load (1.7ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 38ms (View: 32, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-20 22:02:22) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"16"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 16) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 16[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 71ms (DB: 2) | 302 Found [http://127.0.0.1/people/16]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-20 22:02:22) [GET]
+  [4;35;1mPerson Load (3.8ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-20 23:10:11) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 39ms (View: 26, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 23:10:17) [POST]
+  Parameters: {"person"=>{"email"=>"test10"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (5.8ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 23:10:17', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 23:10:17', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7fa0477809fb3460fcf2ea01133fcd2cdc280f0d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+
+ActionView::TemplateError (undefined local variable or method `person' for #<ActionView::Base:0xb681886c>) on line #8 of app/views/person_mailer/welcome_email.text.html.erb:
+5: </head>  
+6: 
+7: <body>  
+8: <p><%= person.email %></p>
+9: <p>Your practice is participating in a General Practice Safety Programme.</p>
+10: <p>As one of the parts of this programme, 
+11: we ask all members of participant practices to fill in a short online questionnaire.</p>
+
+    app/views/person_mailer/welcome_email.text.html.erb:8
+    app/models/person_observer.rb:3:in `after_create'
+    /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+    /usr/lib/ruby/1.8/observer.rb:184:in `each'
+    /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+    app/controllers/people_controller.rb:51:in `create'
+    app/controllers/people_controller.rb:50:in `create'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.3ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 23:10:45) [POST]
+  Parameters: {"person"=>{"email"=>"test10"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;36;1mPerson Create (7.3ms)[0m   [0;1mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 23:10:45', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 23:10:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7fa0477809fb3460fcf2ea01133fcd2cdc280f0d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+
+ActionView::TemplateError (undefined local variable or method `person' for #<ActionView::Base:0xb6a2e110>) on line #8 of app/views/person_mailer/welcome_email.text.html.erb:
+5: </head>  
+6: 
+7: <body>  
+8: <p><%= person.email %></p>
+9: <p>Your practice is participating in a General Practice Safety Programme.</p>
+10: <p>As one of the parts of this programme, 
+11: we ask all members of participant practices to fill in a short online questionnaire.</p>
+
+    app/views/person_mailer/welcome_email.text.html.erb:8
+    app/models/person_observer.rb:3:in `after_create'
+    /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+    /usr/lib/ruby/1.8/observer.rb:184:in `each'
+    /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+    app/controllers/people_controller.rb:51:in `create'
+    app/controllers/people_controller.rb:50:in `create'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.4ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-20 23:11:17) [POST]
+  Parameters: {"person"=>{"email"=>"test10"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (5.8ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 23:11:17', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-20 23:11:17', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7fa0477809fb3460fcf2ea01133fcd2cdc280f0d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Sun, 20 Dec 2009 23:11:17 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2eaf155c9d9_36ff..fdb47c704114
+
+
+--mimepart_4b2eaf155c9d9_36ff..fdb47c704114
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p></p>
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/7fa0477809fb3460fcf2ea01133fcd2cdc280f0d">click t=
+his link, =
+
+or copy the link below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p></p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b2eaf155c9d9_36ff..fdb47c704114--
+Redirected to http://127.0.0.1:3000/people/20
+Completed in 2854ms (DB: 6) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-20 23:11:20) [GET]
+  Parameters: {"id"=>"20"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 51ms (View: 37, DB: 1) | 200 OK [http://127.0.0.1/people/20]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-20 23:13:07) [GET]
+  Parameters: {"hash"=>"7fa0477809fb3460fcf2ea01133fcd2cdc280f0d"}
+  [4;35;1mRole Load (1.7ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mGender Load (0.5ms)[0m   [0;1mSELECT * FROM "genders" [0m
+  [4;35;1mWorkPattern Load (0.6ms)[0m   [0mSELECT * FROM "work_patterns" [0m
+  [4;36;1mServiceLength Load (0.8ms)[0m   [0;1mSELECT * FROM "service_lengths" [0m
+  [4;35;1mQuestionList Load (7.2ms)[0m   [0mSELECT * FROM "question_lists" [0m
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."userhash" = '7fa0477809fb3460fcf2ea01133fcd2cdc280f0d') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (28.3ms)
+Rendered people/_question (13.8ms)
+Rendered people/_question (23.6ms)
+Rendered people/_question (19.8ms)
+Rendered people/_question (23.0ms)
+Completed in 276ms (View: 178, DB: 12) | 200 OK [http://127.0.0.1/people/edit/7fa0477809fb3460fcf2ea01133fcd2cdc280f0d]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:00:09) [GET]
+  [4;36;1mPerson Load (2.7ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 96ms (View: 86, DB: 3) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-21 01:00:11) [GET]
+Rendering template within layouts/application
+Rendering people/new
+
+ActionView::TemplateError (undefined method `params' for #<Person:0xb694cda0>) on line #8 of app/views/people/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :email %><br />
+8:     <%= f.text_field :email %>
+9:   </p>
+10: 
+11:     <%= f.submit 'Add Staff Member' %>
+
+    app/models/person.rb:8:in `email'
+    app/views/people/new.html.erb:8
+    app/views/people/new.html.erb:3
+    app/controllers/people_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (212.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-21 01:00:40) [GET]
+Rendering template within layouts/application
+Rendering people/new
+
+ActionView::TemplateError (undefined local variable or method `params' for #<Person:0xb6a798a4>) on line #8 of app/views/people/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :email %><br />
+8:     <%= f.text_field :email %>
+9:   </p>
+10: 
+11:     <%= f.submit 'Add Staff Member' %>
+
+    app/models/person.rb:8:in `email'
+    app/views/people/new.html.erb:8
+    app/views/people/new.html.erb:3
+    app/controllers/people_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-21 01:03:41) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-21 01:03:46) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (7.4ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:03:46', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:03:46', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Mon, 21 Dec 2009 01:03:46 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2ec9727e85c_4173..fdb47c6321fd
+
+
+--mimepart_4b2ec9727e85c_4173..fdb47c6321fd
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>mark@russell.name</p>
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click t=
+his link</a>, =
+
+or copy the link below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887=
+c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b2ec9727e85c_4173..fdb47c6321fd--
+Redirected to http://127.0.0.1:3000/people/21
+Completed in 4194ms (DB: 7) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-21 01:03:50) [GET]
+  Parameters: {"id"=>"21"}
+  [4;36;1mPerson Load (1.8ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 21) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 39ms (View: 25, DB: 2) | 200 OK [http://127.0.0.1/people/21]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-21 01:04:43) [POST]
+  Parameters: {"person"=>{"email"=>"markjrussell@gmail.com"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (6.8ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:04:43', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:04:43', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7afea609e8ae50a4e6a25a78cb620301bd785810', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to markjrussell@gmail.com
+
+Date: Mon, 21 Dec 2009 01:04:43 +0000
+From: safequest@itforgp.com
+To: markjrussell@gmail.com
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2ec9ab1cb71_4173..fdb4e2a40418
+
+
+--mimepart_4b2ec9ab1cb71_4173..fdb4e2a40418
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>markjrussell@gmail.com</p>
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/7afea609e8ae50a4e6a25a78cb620301bd785810">click t=
+his link</a>, =
+
+or copy the link below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/7afea609e8ae50a4e6a25a78cb620=
+301bd785810</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b2ec9ab1cb71_4173..fdb4e2a40418--
+Redirected to http://127.0.0.1:3000/people/22
+Completed in 2423ms (DB: 7) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-21 01:04:45) [GET]
+  Parameters: {"id"=>"22"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 22) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 34ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/people/22]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-21 01:05:55) [POST]
+  Parameters: {"person"=>{"email"=>"mark.russell@nes.scot.nhs.uk"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (5.3ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:05:55', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:05:55', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0d82fb9b63166d8df61637c33fbf1a8dcc225719', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark.russell@nes.scot.nhs.uk
+
+Date: Mon, 21 Dec 2009 01:05:55 +0000
+From: safequest@itforgp.com
+To: mark.russell@nes.scot.nhs.uk
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2ec9f3dc19f_4173..fdb459f107fb
+
+
+--mimepart_4b2ec9f3dc19f_4173..fdb459f107fb
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/0d82fb9b63166d8df61637c33fbf1a8dcc225719">click t=
+his link</a>, =
+
+or copy the link below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/0d82fb9b63166d8df61637c33fbf1=
+a8dcc225719</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b2ec9f3dc19f_4173..fdb459f107fb--
+Redirected to http://127.0.0.1:3000/people/23
+Completed in 2484ms (DB: 5) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-21 01:05:58) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mPerson Load (1.1ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 23) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/people/23]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-21 01:06:38) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w="}
+  [4;35;1mPerson Create (5.9ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:06:38', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-21 01:06:38', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Mon, 21 Dec 2009 01:06:38 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b2eca1ed4711_4173..fdb4e240010cb
+
+
+--mimepart_4b2eca1ed4711_4173..fdb4e240010cb
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click t=
+his link</a>, =
+
+or copy the link below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887=
+c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b2eca1ed4711_4173..fdb4e240010cb--
+Redirected to http://127.0.0.1:3000/people/24
+Completed in 2151ms (DB: 6) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-21 01:06:41) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mPerson Load (2.1ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 24) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 30ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/people/24]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-21 01:09:06) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;35;1mRole Load (18.0ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mGender Load (0.6ms)[0m   [0;1mSELECT * FROM "genders" [0m
+  [4;35;1mWorkPattern Load (0.7ms)[0m   [0mSELECT * FROM "work_patterns" [0m
+  [4;36;1mServiceLength Load (0.9ms)[0m   [0;1mSELECT * FROM "service_lengths" [0m
+  [4;35;1mQuestionList Load (4.0ms)[0m   [0mSELECT * FROM "question_lists" [0m
+  [4;36;1mPerson Load (1.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (15.8ms)
+Rendered people/_question (14.1ms)
+Rendered people/_question (17.6ms)
+Rendered people/_question (24.7ms)
+Rendered people/_question (25.1ms)
+Completed in 383ms (View: 154, DB: 26) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
