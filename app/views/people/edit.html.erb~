@@ -1,65 +1,41 @@
-<h1>Editing person</h1>
-
 <% form_for(@person) do |f| %>
   <%= f.error_messages %>
 
 	<fieldset id="page_1">
 	<legend>About You</legend>
   <p>
-    <%= f.label "Your Role" %><br />
-    <%= collection_select(@person, 'role', @roles, 'id', 'name',{:prompt => ""}) %>
+		To give the answers to the questions which follow a context, it would be useful if you could tell us about yourself.
+	</p>
+	<p>
+    <%= f.label "What year did you begin your fellowship?" %><br />
+    <%= f.text_field :begin_fellowship_yr %>
   </p>
   <p>
-    <%= f.label :gender %><br />
-    <%= collection_select(@person, 'gender', @gender, 'id', 'name',{:prompt => ""}) %>  </p>
+    What year did you complete your VTS?<br />
+    <%= f.text_field :complete_vts_yr %>
   <p>
-    <%= f.label :work_pattern %><br />
-    <%= collection_select(@person, 'work_pattern', @workpattern, 'id', 'name',{:prompt => ""}) %>  </p>
-  <p>
-    <%= f.label :practice_service %><br />
-    <%= collection_select(@person, 'practice_service', @servicelength, 'id', 'name',{:prompt => ""}) %>
-  </p>
-  <p>
-    <%= f.label :total_service %><br />
-    <%= collection_select(@person, 'total_service', @servicelength, 'id', 'name',{:prompt => ""}) %>  </p>
+    <%= f.label "What year did you graduate?" %><br />
+    <%= f.text_field :graduate_yr %>
+
 	</fieldset>
 
 	<div id="page2">
 		<fieldset>
-		<legend>Workload</legend>	
+		<legend>The Fellowship</legend>	
 			<%= render :partial => "question", :locals => {:start_question => 1, :end_question => 4} %>
 		</fieldset>
 	</div>
 
 	<div id="page3">
 		<fieldset>
-		<legend>Communication</legend>	
-			<%= render :partial => "question", :locals => {:start_question => 5, :end_question => 9} %>
+		<legend>More About You</legend>	
+			<%= render :partial => "question", :locals => {:start_question => 5, :end_question => 7} %>
 		</fieldset>
 	</div>
 
-	<div id="page4">
-		<fieldset>
-		<legend>Leadership</legend>	
-			<%= render :partial => "question", :locals => {:start_question => 10, :end_question => 15} %>
-		</fieldset>
-	</div>
-
-	<div id="page5">
-		<fieldset>
-		<legend>Teamwork</legend>	
-			<%= render :partial => "question", :locals => {:start_question => 16, :end_question => 22} %>
-		</fieldset>
-	</div>
-
-	<div id="page2">
-		<fieldset>
-		<legend>Safety Systems and Learning</legend>	
-		</fieldset>
-	</div>
 
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Save Your Answers' %>
   </p>
 <% end %>
 

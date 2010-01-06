@@ -7308,3 +7308,2492 @@ Rendered people/_question (17.6ms)
 Rendered people/_question (24.7ms)
 Rendered people/_question (25.1ms)
 Completed in 383ms (View: 154, DB: 26) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:12:29) [GET]
+  [4;35;1mPerson Load (4.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 82ms (View: 71, DB: 4) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-21 01:12:36) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mRole Load (1.6ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mGender Load (0.6ms)[0m   [0mSELECT * FROM "genders" [0m
+  [4;36;1mWorkPattern Load (0.6ms)[0m   [0;1mSELECT * FROM "work_patterns" [0m
+  [4;35;1mServiceLength Load (1.1ms)[0m   [0mSELECT * FROM "service_lengths" [0m
+  [4;36;1mQuestionList Load (3.4ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/people/edit.html.erb:
+1: <h1>Editing person</h1>
+2: 
+3: <% form_for(@person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6: 	<fieldset id="page_1">
+
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (211.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:01) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"18"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 18) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 18[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 108ms (DB: 2) | 302 Found [http://127.0.0.1/people/18]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:01) [GET]
+  [4;36;1mPerson Load (4.2ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 78ms (View: 67, DB: 4) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:08) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"19"}
+  [4;35;1mPerson Load (1.1ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 19) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 19[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 95ms (DB: 2) | 302 Found [http://127.0.0.1/people/19]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:08) [GET]
+  [4;35;1mPerson Load (3.2ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 66ms (View: 57, DB: 3) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:17) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"20"}
+  [4;36;1mPerson Load (1.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 20) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 20[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 23ms (DB: 2) | 302 Found [http://127.0.0.1/people/20]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:17) [GET]
+  [4;36;1mPerson Load (3.6ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 59ms (View: 49, DB: 4) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:28) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"21"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 21) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 21[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 88ms (DB: 2) | 302 Found [http://127.0.0.1/people/21]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:28) [GET]
+  [4;35;1mPerson Load (3.1ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 54ms (View: 45, DB: 3) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:35) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"22"}
+  [4;36;1mPerson Load (29.5ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 22) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 22[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 99ms (DB: 30) | 302 Found [http://127.0.0.1/people/22]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:35) [GET]
+  [4;36;1mPerson Load (1.9ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 49ms (View: 40, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:40) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"23"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 23) [0m
+  [4;36;1mPerson Destroy (0.9ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 23[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 24ms (DB: 2) | 302 Found [http://127.0.0.1/people/23]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:41) [GET]
+  [4;35;1mPerson Load (1.6ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 37ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2009-12-21 01:13:49) [DELETE]
+  Parameters: {"authenticity_token"=>"uscXl1T+wsJkYk3HQbfF2Wk4V5qnFi2P7Fhyyn6tb/w=", "id"=>"24"}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 24) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 24[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 104ms (DB: 2) | 302 Found [http://127.0.0.1/people/24]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-21 01:13:49) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-22 10:23:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/rails.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-22 10:24:01) [GET]
+
+ActionController::RoutingError (No route matches "/person" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 10:24:06) [GET]
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 262ms (View: 256, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-22 10:24:10) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 286ms (View: 274, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-22 10:25:07) [POST]
+  Parameters: {"person"=>{"email"=>"mar@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"+63n2F4fzvdfHt/Btbpw/KjuZG1nrvv5NWJypwoqJ94="}
+  [4;35;1mPerson Create (4.6ms)[0m   [0mINSERT INTO "people" ("q1", "q16", "q27", "q2", "q17", "q28", "created_at", "q3", "q18", "q29", "q4", "q19", "q30", "updated_at", "batch_id", "role", "work_pattern", "q5", "q20", "gender", "q6", "q10", "q21", "total_service", "q7", "q11", "q22", "q8", "q12", "q23", "userhash", "practice_service", "q9", "q13", "q24", "q14", "q25", "q15", "q26") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-22 10:25:07', NULL, NULL, NULL, NULL, NULL, NULL, '2009-12-22 10:25:07', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'd0b6e5931d801b9f8df8c9c689c39dece3d93643', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Sent mail to mar@russell.name
+
+Date: Tue, 22 Dec 2009 10:25:08 +0000
+From: safequest@itforgp.com
+To: mar@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b309e8414f38_c5a..fdb5495b01d1
+
+
+--mimepart_4b309e8414f38_c5a..fdb5495b01d1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/d0b6e5931d801b9f8df8c9c689c39dece3d93643">click t=
+his link</a>, =
+
+or copy the address below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/d0b6e5931d801b9f8df8c9c689c39=
+dece3d93643</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b309e8414f38_c5a..fdb5495b01d1--
+
+SocketError (getaddrinfo: Name or service not known):
+  /usr/lib/ruby/1.8/net/smtp.rb:551:in `initialize'
+  /usr/lib/ruby/1.8/net/smtp.rb:551:in `open'
+  /usr/lib/ruby/1.8/net/smtp.rb:551:in `do_start'
+  /usr/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  /usr/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  /usr/lib/ruby/1.8/net/smtp.rb:551:in `do_start'
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/models/person_observer.rb:3:in `after_create'
+  /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+  /usr/lib/ruby/1.8/observer.rb:184:in `each'
+  /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+  app/controllers/people_controller.rb:51:in `create'
+  app/controllers/people_controller.rb:50:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 10:25:16) [GET]
+  [4;36;1mPerson Load (1.6ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 33ms (View: 25, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 10:25:22) [GET]
+  Parameters: {"id"=>"25"}
+  [4;35;1mRole Load (1.7ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mGender Load (0.6ms)[0m   [0;1mSELECT * FROM "genders" [0m
+  [4;35;1mWorkPattern Load (0.7ms)[0m   [0mSELECT * FROM "work_patterns" [0m
+  [4;36;1mServiceLength Load (0.9ms)[0m   [0;1mSELECT * FROM "service_lengths" [0m
+  [4;35;1mQuestionList Load (3.4ms)[0m   [0mSELECT * FROM "question_lists" [0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."userhash" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/people/edit.html.erb:
+1: <h1>Editing person</h1>
+2: 
+3: <% form_for(@person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6: 	<fieldset id="page_1">
+
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-22 10:25:44) [GET]
+  Parameters: {"id"=>"edit"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Person with ID=edit):
+  app/controllers/people_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mPerson Load (1.7ms)[0m   [0;1mSELECT * FROM "people" [0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 10:26:38) [GET]
+  Parameters: {"hash"=>"d0b6e5931d801b9f8df8c9c689c39dece3d93643"}
+  [4;36;1mRole Load (1.7ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mGender Load (0.6ms)[0m   [0mSELECT * FROM "genders" [0m
+  [4;36;1mWorkPattern Load (0.7ms)[0m   [0;1mSELECT * FROM "work_patterns" [0m
+  [4;35;1mServiceLength Load (0.8ms)[0m   [0mSELECT * FROM "service_lengths" [0m
+  [4;36;1mQuestionList Load (3.2ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'd0b6e5931d801b9f8df8c9c689c39dece3d93643') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (29.8ms)
+Rendered people/_question (12.7ms)
+Rendered people/_question (15.9ms)
+Rendered people/_question (20.7ms)
+Rendered people/_question (20.7ms)
+Completed in 341ms (View: 143, DB: 8) | 200 OK [http://127.0.0.1/people/edit/d0b6e5931d801b9f8df8c9c689c39dece3d93643]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2009-12-22 10:30:46) [PUT]
+  Parameters: {"person"=>{"q18"=>"5"}, "commit"=>"Update", "authenticity_token"=>"+63n2F4fzvdfHt/Btbpw/KjuZG1nrvv5NWJypwoqJ94=", "id"=>"25", "#<Person:0xb6a4a66c>"=>{"work_pattern"=>"", "role"=>"", "gender"=>"", "total_service"=>"", "practice_service"=>""}}
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 25) [0m
+  [4;35;1mPerson Update (0.5ms)[0m   [0mUPDATE "people" SET "updated_at" = '2009-12-22 10:30:46', "q18" = 5 WHERE "id" = 25[0m
+Redirected to http://127.0.0.1:3000/people/25
+Completed in 43ms (DB: 2) | 302 Found [http://127.0.0.1/people/25]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-22 10:30:46) [GET]
+  Parameters: {"id"=>"25"}
+  [4;36;1mPerson Load (1.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 25) [0m
+Rendering template within layouts/application
+Rendering people/show
+Completed in 51ms (View: 37, DB: 1) | 200 OK [http://127.0.0.1/people/25]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "emailhash" varchar(255), "begin_fellowship_yr" varchar(255), "complete_vts_yr" varchar(255), "graduate_yr" varchar(255), "q1" text, "q2" text, "q3" text, "q4" text, "q5" text, "q6" text, "q7" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217220112')[0m
+Migrating to CreateQuestionLists (20091218120745)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "question_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091218120745')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("question_lists")[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 13:52:43) [GET]
+  [4;36;1mPerson Load (0.8ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 84ms (View: 79, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-22 13:52:47) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 13:52:52) [GET]
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-22 13:52:54) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-22 13:53:02) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uIhf3KtaR7WxSrP+kO7cx/CXaFKh1zPkb5JvXUo3Kjs="}
+
+NoMethodError (undefined method `userhash=' for #<Person:0xb69838c8>):
+  app/models/person.rb:13:in `email='
+  app/controllers/people_controller.rb:48:in `new'
+  app/controllers/people_controller.rb:48:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.9ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "emailhash" varchar(255), "begin_fellowship_yr" varchar(255), "complete_vts_yr" varchar(255), "graduate_yr" varchar(255), "q1" text, "q2" text, "q3" text, "q4" text, "q5" text, "q6" text, "q7" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217220112')[0m
+Migrating to CreateQuestionLists (20091218120745)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "question_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091218120745')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("question_lists")[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-22 13:55:51) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uIhf3KtaR7WxSrP+kO7cx/CXaFKh1zPkb5JvXUo3Kjs="}
+
+NoMethodError (undefined method `userhash=' for #<Person:0xb693ffc4>):
+  app/models/person.rb:13:in `email='
+  app/controllers/people_controller.rb:48:in `new'
+  app/controllers/people_controller.rb:48:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20091217220112)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "userhash" varchar(255), "begin_fellowship_yr" varchar(255), "complete_vts_yr" varchar(255), "graduate_yr" varchar(255), "q1" text, "q2" text, "q3" text, "q4" text, "q5" text, "q6" text, "q7" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217220112')[0m
+Migrating to CreateQuestionLists (20091218120745)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "question_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "order" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091218120745')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("question_lists")[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-22 13:56:47) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"uIhf3KtaR7WxSrP+kO7cx/CXaFKh1zPkb5JvXUo3Kjs="}
+  [4;36;1mPerson Create (7.5ms)[0m   [0;1mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2009-12-22 13:56:47', NULL, NULL, '2009-12-22 13:56:47', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Tue, 22 Dec 2009 13:56:47 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b30d01feea66_13a4..fdb9cfa0813
+
+
+--mimepart_4b30d01feea66_13a4..fdb9cfa0813
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click t=
+his link</a>, =
+
+or copy the address below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887=
+c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b30d01feea66_13a4..fdb9cfa0813--
+Redirected to http://127.0.0.1:3000/people/1
+Completed in 4506ms (DB: 8) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-22 13:56:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb67d7344>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (192.6ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 13:57:20) [GET]
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb68a31d8>) on line #45 of app/views/people/index.html.erb:
+42: 
+43: <% @people.each do |person| %>
+44:   <tr>
+45:     <td><%=h person.batch_id %></td>
+46:     <td><%=h person.role %></td>
+47:     <td><%=h person.gender %></td>
+48:     <td><%=h person.work_pattern %></td>
+
+    app/views/people/index.html.erb:45
+    app/views/people/index.html.erb:43:in `each'
+    app/views/people/index.html.erb:43
+    app/controllers/people_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 13:58:20) [GET]
+  [4;35;1mPerson Load (0.9ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 52ms (View: 45, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-22 13:58:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb68c0648>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 13:58:38) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;35;1mRole Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: roles: SELECT * FROM "roles" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: roles: SELECT * FROM "roles" ):
+  app/controllers/people_controller.rb:37:in `edit'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (178.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 13:59:00) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.8ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:00:53) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:01:48) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (75.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:02:13) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:02:23) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:02:24) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:02:26) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-22 14:02:27) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-12-22 14:02:32) [GET]
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/people/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 22:18:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/rails.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-06 22:18:36) [GET]
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 85ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/rails/info/properties]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:19:03) [GET]
+  [4;36;1mPerson Load (8.9ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 188ms (View: 174, DB: 9) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 22:19:05) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 142ms (View: 135, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 22:19:08) [POST]
+  Parameters: {"person"=>{"email"=>""}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;35;1mPerson Create (50.5ms)[0m   [0mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 22:19:08', NULL, NULL, '2010-01-06 22:19:08', NULL, NULL, NULL, NULL, NULL, '05da499b1a80cd6530af8515acdd894c8ce5d2d2', NULL)[0m
+Sent mail to 
+
+Date: Wed, 6 Jan 2010 22:19:08 +0000
+From: safequest@itforgp.com
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b450c5c704e8_421f..fdb4879ec163
+
+
+--mimepart_4b450c5c704e8_421f..fdb4879ec163
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/05da499b1a80cd6530af8515acdd894c8ce5d2d2">click t=
+his link</a>, =
+
+or copy the address below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/05da499b1a80cd6530af8515acdd8=
+94c8ce5d2d2</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b450c5c704e8_421f..fdb4879ec163--
+
+Net::SMTPFatalError (555 5.5.2 Syntax error. 7sm697549eyg.33
+):
+  /usr/lib/ruby/1.8/net/smtp.rb:930:in `check_response'
+  /usr/lib/ruby/1.8/net/smtp.rb:899:in `getok'
+  /usr/lib/ruby/1.8/net/smtp.rb:842:in `rcptto'
+  /usr/lib/ruby/1.8/net/smtp.rb:834:in `rcptto_list'
+  /usr/lib/ruby/1.8/net/smtp.rb:833:in `each'
+  /usr/lib/ruby/1.8/net/smtp.rb:833:in `rcptto_list'
+  /usr/lib/ruby/1.8/net/smtp.rb:654:in `sendmail'
+  /usr/lib/ruby/1.8/net/smtp.rb:526:in `start'
+  app/models/person_observer.rb:3:in `after_create'
+  /usr/lib/ruby/1.8/observer.rb:185:in `notify_observers'
+  /usr/lib/ruby/1.8/observer.rb:184:in `each'
+  /usr/lib/ruby/1.8/observer.rb:184:in `notify_observers'
+  app/controllers/people_controller.rb:48:in `create'
+  app/controllers/people_controller.rb:47:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.9ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:19:13) [GET]
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 48ms (View: 42, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 22:19:15) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:19:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mQuestionList Load (0.6ms)[0m   [0mSELECT * FROM "question_lists" [0m
+  [4;36;1mPerson Load (0.4ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."userhash" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/people/edit.html.erb:
+1: <h1>Editing person</h1>
+2: 
+3: <% form_for(@person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6: 	<fieldset id="page_1">
+
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (127.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:21:07) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 43ms (View: 37, DB: 1) | 200 OK [http://127.0.0.1/people/?hash=a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:21:12) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mPerson Load (41.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 114ms (View: 68, DB: 41) | 200 OK [http://127.0.0.1/people/?hash=a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:21:19) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb", "id"=>"edit"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Person with ID=edit):
+  app/controllers/people_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:21:52) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb", "id"=>"1"}
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (341.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-01-06 22:22:14) [DELETE]
+  Parameters: {"authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"1"}
+  [4;36;1mPerson Load (1.8ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 1) [0m
+  [4;35;1mPerson Destroy (0.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 1[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 19ms (DB: 2) | 302 Found [http://127.0.0.1/people/1]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:22:14) [GET]
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-01-06 22:22:16) [DELETE]
+  Parameters: {"authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"2"}
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 2) [0m
+  [4;36;1mPerson Destroy (0.4ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 2[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 17ms (DB: 1) | 302 Found [http://127.0.0.1/people/2]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:22:16) [GET]
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 22:22:18) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 33ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 22:22:23) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;36;1mPerson Create (18.4ms)[0m   [0;1mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 22:22:23', NULL, NULL, '2010-01-06 22:22:23', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Wed, 6 Jan 2010 22:22:23 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b450d1ff2d32_421f..fdb4eb66843c
+
+
+--mimepart_4b450d1ff2d32_421f..fdb4eb66843c
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>Your practice is participating in a General Practice Safety Programme.=
+</p>
+<p>As one of the parts of this programme, =
+
+we ask all members of participant practices to fill in a short online que=
+stionnaire.</p>
+<p>The responses to this questionnaire are completely confidential, =
+
+and although a report will be given to the practice, =
+
+no information will be released which could identify individuals.</p>
+<p>If you are willing to participate, please <a href=3D"http://safequest.=
+itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click t=
+his link</a>, =
+
+or copy the address below into your web browser.</p>
+
+<p>Many thanks for your participation</p>
+<p>http://safequest.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887=
+c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b450d1ff2d32_421f..fdb4eb66843c--
+Redirected to http://127.0.0.1:3000/people/3
+Completed in 4335ms (DB: 18) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:22:28) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPerson Load (0.8ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb6a67140>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:22:39) [GET]
+  [4;36;1mPerson Load (0.9ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:22:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPerson Load (24.9ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb6837960>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:22:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/people/edit.html.erb:
+1: <h1>Editing person</h1>
+2: 
+3: <% form_for(@person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6: 	<fieldset id="page_1">
+
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:22:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.4ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/people/edit.html.erb:
+1: <h1>Editing person</h1>
+2: 
+3: <% form_for(@person) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6: 	<fieldset id="page_1">
+
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.1ms)
+Rendered rescues/_request_and_response (3.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:23:44) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 53ms (View: 48, DB: 1) | 200 OK [http://127.0.0.1/people?hash=a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:23:49) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb", "id"=>"edit"}
+  [4;35;1mPerson Load (0.3ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Person with ID=edit):
+  app/controllers/people_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (303.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:25:04) [GET]
+  Parameters: {"id"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mPerson Load (0.3ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Person with ID=a7c282e0470ceb4018a4d062aa887c35eca82dcb):
+  app/controllers/people_controller.rb:16:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:25:14) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;35;1mQuestionList Load (0.6ms)[0m   [0mSELECT * FROM "question_lists" [0m
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.question) on line #4 of app/views/people/_question.html.erb:
+1: <table class="questiontable">
+2: 		<% start_question.upto(end_question) do |count| %>
+3: 			<tr class="alternatingtable<%= (count-start_question) % 2 %>">
+4: 				<td class="question"><%= @questionlist.at(count-1).question %></td>
+5: 				<td class="radiokeyleft">
+6: 					not at all
+7: 				</td>
+
+    app/views/people/_question.html.erb:4
+    app/views/people/_question.html.erb:2:in `upto'
+    app/views/people/_question.html.erb:2
+    app/views/people/edit.html.erb:27
+    app/views/people/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (356.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 22:26:02) [GET]
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 51ms (View: 45, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 22:26:11) [GET]
+
+ActionController::RoutingError (No route matches "/questionlist" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 22:26:15) [GET]
+
+ActionController::RoutingError (No route matches "/question_list" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 22:26:21) [GET]
+
+ActionController::RoutingError (No route matches "/questionlists" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 22:26:24) [GET]
+
+ActionController::RoutingError (No route matches "/questionlists" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-06 22:26:28) [GET]
+
+ActionController::RoutingError (No route matches "/questionlists" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing QuestionListsController#index (for 127.0.0.1 at 2010-01-06 22:26:36) [GET]
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+Rendering template within layouts/application
+Rendering question_lists/index
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/question_lists]
+
+
+Processing QuestionListsController#new (for 127.0.0.1 at 2010-01-06 22:26:43) [GET]
+Rendering template within layouts/application
+Rendering question_lists/new
+Completed in 66ms (View: 36, DB: 0) | 200 OK [http://127.0.0.1/question_lists/new]
+
+
+Processing QuestionListsController#index (for 127.0.0.1 at 2010-01-06 22:29:45) [GET]
+  [4;36;1mQuestionList Load (0.7ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+Rendering template within layouts/application
+Rendering question_lists/index
+Completed in 48ms (View: 39, DB: 1) | 200 OK [http://127.0.0.1/question_lists]
+
+
+Processing QuestionListsController#index (for 127.0.0.1 at 2010-01-06 22:29:48) [GET]
+  [4;35;1mQuestionList Load (0.6ms)[0m   [0mSELECT * FROM "question_lists" [0m
+Rendering template within layouts/application
+Rendering question_lists/index
+Completed in 24ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/question_lists]
+
+
+Processing QuestionListsController#index (for 127.0.0.1 at 2010-01-06 22:29:50) [GET]
+  [4;36;1mQuestionList Load (0.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+Rendering template within layouts/application
+Rendering question_lists/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/question_lists]
+  [4;36;1mQuestionList Load (0.4ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Why did you apply for the fellowship?') LIMIT 1[0m
+  [4;35;1mQuestionList Create (18.2ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'Why did you apply for the fellowship?')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'What do you feel you got out of the fellowship?') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'What do you feel you got out of the fellowship?')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'How did the fellowship compare with your expectations?') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'How did the fellowship compare with your expectations?')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'What did you feel the limitations of the fellowship were?') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.8ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'What did you feel the limitations of the fellowship were?')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'Please give a brief summary of your career since completing the fellowship') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'Please give a brief summary of your career since completing the fellowship')[0m
+  [4;36;1mQuestionList Load (0.2ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'How do you feel that the fellowship has influenced the course of your career?') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'How do you feel that the fellowship has influenced the course of your career?')[0m
+  [4;36;1mQuestionList Load (0.3ms)[0m   [0;1mSELECT * FROM "question_lists" WHERE ("question_lists"."question" = 'What long term career aspirations did you have before you started the fellowship, and how do they compare with your aspirations now?') LIMIT 1[0m
+  [4;35;1mQuestionList Create (0.4ms)[0m   [0mINSERT INTO "question_lists" ("created_at", "updated_at", "order", "question") VALUES('2010-01-06 22:33:24', '2010-01-06 22:33:24', NULL, 'What long term career aspirations did you have before you started the fellowship, and how do they compare with your aspirations now?')[0m
+
+
+Processing QuestionListsController#index (for 127.0.0.1 at 2010-01-06 22:33:32) [GET]
+  [4;35;1mQuestionList Load (1.4ms)[0m   [0mSELECT * FROM "question_lists" [0m
+Rendering template within layouts/application
+Rendering question_lists/index
+Completed in 132ms (View: 122, DB: 1) | 200 OK [http://127.0.0.1/question_lists]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:33:41) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (18.9ms)
+Rendered people/_question (7.8ms)
+Completed in 83ms (View: 60, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:35:59) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.7ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (17.7ms)
+Rendered people/_question (10.9ms)
+Completed in 74ms (View: 55, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:40:14) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (5.4ms)
+Rendered people/_question (1.3ms)
+Completed in 110ms (View: 64, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:41:36) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (5.5ms)
+Rendered people/_question (21.8ms)
+Completed in 116ms (View: 81, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:42:07) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.9ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (5.8ms)
+Rendered people/_question (1.3ms)
+Completed in 42ms (View: 27, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:42:10) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (4.4ms)
+Rendered people/_question (13.6ms)
+Completed in 86ms (View: 71, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:43:05) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (5.4ms)
+Rendered people/_question (1.3ms)
+Completed in 70ms (View: 56, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:43:25) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.4ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (6.1ms)
+Rendered people/_question (1.5ms)
+Completed in 143ms (View: 30, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:43:39) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.6ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (5.7ms)
+Rendered people/_question (1.3ms)
+Completed in 43ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:44:02) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (10.5ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (17.6ms)
+Rendered people/_question (1.3ms)
+Completed in 100ms (View: 50, DB: 11) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:44:35) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (1.3ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (20.8ms)
+Rendered people/_question (1.4ms)
+Completed in 107ms (View: 73, DB: 2) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2010-01-06 22:44:50) [GET]
+  Parameters: {"hash"=>"a7c282e0470ceb4018a4d062aa887c35eca82dcb"}
+  [4;36;1mQuestionList Load (17.1ms)[0m   [0;1mSELECT * FROM "question_lists" [0m
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."userhash" = 'a7c282e0470ceb4018a4d062aa887c35eca82dcb') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/edit
+Rendered people/_question (32.6ms)
+Rendered people/_question (1.3ms)
+Completed in 86ms (View: 57, DB: 18) | 200 OK [http://127.0.0.1/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-01-06 22:45:45) [PUT]
+  Parameters: {"person"=>{"q1"=>"kjcjxj", "begin_fellowship_yr"=>"2008", "q2"=>"SKDCK;CLK", "q3"=>"KSD;CLKC;LK", "q4"=>"KD;LKSDCKJNSCKJ", "q5"=>"nsdcksnc", "graduate_yr"=>"2004", "complete_vts_yr"=>"2008", "q6"=>"nsdkcn", "q7"=>"anlknsdck"}, "commit"=>"Save Your Answers", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+  [4;35;1mPerson Update (0.9ms)[0m   [0mUPDATE "people" SET "updated_at" = '2010-01-06 22:45:45', "q2" = 'SKDCK;CLK', "q1" = 'kjcjxj', "complete_vts_yr" = '2008', "graduate_yr" = '2004', "begin_fellowship_yr" = '2008', "q7" = 'anlknsdck', "q6" = 'nsdkcn', "q5" = 'nsdcksnc', "q4" = 'KD;LKSDCKJNSCKJ', "q3" = 'KSD;CLKC;LK' WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3000/people/3
+Completed in 46ms (DB: 2) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:45:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb69aec08>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.8ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:50:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb6818934>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-01-06 22:50:50) [PUT]
+  Parameters: {"person"=>{"q1"=>"kjcjxj", "begin_fellowship_yr"=>"2008", "q2"=>"SKDCK;CLK", "q3"=>"KSD;CLKC;LK", "q4"=>"KD;LKSDCKJNSCKJ", "q5"=>"nsdcksnc", "graduate_yr"=>"2004", "complete_vts_yr"=>"2008", "q6"=>"nsdkcn", "q7"=>"anlknsdck"}, "commit"=>"Save Your Answers", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Redirected to http://127.0.0.1:3000thanks
+Completed in 14ms (DB: 1) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-01-06 22:50:50) [PUT]
+  Parameters: {"person"=>{"q1"=>"kjcjxj", "begin_fellowship_yr"=>"2008", "q2"=>"SKDCK;CLK", "q3"=>"KSD;CLKC;LK", "q4"=>"KD;LKSDCKJNSCKJ", "q5"=>"nsdcksnc", "graduate_yr"=>"2004", "complete_vts_yr"=>"2008", "q6"=>"nsdkcn", "q7"=>"anlknsdck"}, "commit"=>"Save Your Answers", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Redirected to http://127.0.0.1:3000thanks
+Completed in 15ms (DB: 1) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-01-06 22:51:03) [PUT]
+  Parameters: {"person"=>{"q1"=>"kjcjxj", "begin_fellowship_yr"=>"2008", "q2"=>"SKDCK;CLK", "q3"=>"KSD;CLKC;LK", "q4"=>"KD;LKSDCKJNSCKJ", "q5"=>"nsdcksnc", "graduate_yr"=>"2004", "complete_vts_yr"=>"2008", "q6"=>"nsdkcn", "q7"=>"anlknsdck"}, "commit"=>"Save Your Answers", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Redirected to http://127.0.0.1:3000thanks
+Completed in 16ms (DB: 1) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-01-06 22:51:59) [PUT]
+  Parameters: {"person"=>{"q1"=>"kjcjxj", "begin_fellowship_yr"=>"2008", "q2"=>"SKDCK;CLK", "q3"=>"KSD;CLKC;LK", "q4"=>"KD;LKSDCKJNSCKJ", "q5"=>"nsdcksnc", "graduate_yr"=>"2004", "complete_vts_yr"=>"2008", "q6"=>"nsdkcn", "q7"=>"anlknsdck"}, "commit"=>"Save Your Answers", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;35;1mPerson Load (0.9ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/thanks
+Completed in 34ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2010-01-06 22:52:29) [PUT]
+  Parameters: {"person"=>{"q1"=>"kjcjxj", "begin_fellowship_yr"=>"2008", "q2"=>"SKDCK;CLK", "q3"=>"KSD;CLKC;LK", "q4"=>"KD;LKSDCKJNSCKJ", "q5"=>"nsdcksnc", "graduate_yr"=>"2004", "complete_vts_yr"=>"2008", "q6"=>"nsdkcn", "q7"=>"anlknsdck"}, "commit"=>"Save Your Answers", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering people/thanks
+Completed in 37ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 22:57:55) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 22:58:18) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;35;1mPerson Create (4.8ms)[0m   [0mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 22:58:18', NULL, NULL, '2010-01-06 22:58:18', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Wed, 6 Jan 2010 22:58:18 +0000
+From: safequest@itforgp.com
+To: mark@russell.name
+Subject: Your practice manager requests that you fill in this Safety Questionnaire
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b45158a47d65_42f9..fdb4f396c1b4
+
+
+--mimepart_4b45158a47d65_42f9..fdb4f396c1b4
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>I am currently one of the Research Fellows at NHS Education for Scotla=
+nd, and I'm contacting you as one of the previous fellows at NES.  I was =
+hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as =
+part of this, I have prepared a brief questionnaire which I would be very=
+ grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main=
+ areas in which the fellowships are perceived to have been useful by the =
+fellows, and also ways in which they could be improved. You input would t=
+herefore be invaluable; if you do feel able to contribute, I would be gra=
+teful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href=3D"http://fellowship=
+s.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click=
+ this link</a>, =
+
+or copy the address below into your web browser.</p>
+
+Mark Russell
+
+<p>Many thanks for your participation</p>
+<p>http://fellowships.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa8=
+87c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b45158a47d65_42f9..fdb4f396c1b4--
+Redirected to http://127.0.0.1:3000/people/4
+Completed in 3207ms (DB: 5) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-06 22:58:21) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPerson Load (0.6ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering people/show
+
+ActionView::TemplateError (undefined method `batch_id' for #<Person:0xb6848b98>) on line #3 of app/views/people/show.html.erb:
+1: <p>
+2:   <b>Batch:</b>
+3:   <%=h @person.batch_id %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/people/show.html.erb:3
+    app/controllers/people_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 23:02:27) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;35;1mPerson Create (6.9ms)[0m   [0mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 23:02:27', NULL, NULL, '2010-01-06 23:02:27', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Wed, 6 Jan 2010 23:02:27 +0000
+From: mark.russell@nes.scot.nhs.uk
+To: mark@russell.name
+Subject: NES Fellowships
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b45168368b8f_42f9..fdb4c8172453
+
+
+--mimepart_4b45168368b8f_42f9..fdb4c8172453
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>I am currently one of the Research Fellows at NHS Education for Scotla=
+nd, and I'm contacting you as one of the previous fellows at NES.  I was =
+hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as =
+part of this, I have prepared a brief questionnaire which I would be very=
+ grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main=
+ areas in which the fellowships are perceived to have been useful by the =
+fellows, and also ways in which they could be improved. You input would t=
+herefore be invaluable; if you do feel able to contribute, I would be gra=
+teful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href=3D"http://fellowship=
+s.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click=
+ this link</a>, =
+
+or copy the address below into your web browser.</p>
+
+Mark Russell
+
+<p>Many thanks for your participation</p>
+<p>http://fellowships.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa8=
+87c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b45168368b8f_42f9..fdb4c8172453--
+Redirected to http://127.0.0.1:3000/people
+Completed in 2388ms (DB: 7) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:02:29) [GET]
+  [4;36;1mPerson Load (1.3ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 81ms (View: 75, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-01-06 23:02:39) [DELETE]
+  Parameters: {"authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"3"}
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 3) [0m
+  [4;36;1mPerson Destroy (2.2ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 3[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 33ms (DB: 3) | 302 Found [http://127.0.0.1/people/3]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:02:39) [GET]
+  [4;35;1mPerson Load (1.2ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 72ms (View: 51, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-01-06 23:02:42) [DELETE]
+  Parameters: {"authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"4"}
+  [4;36;1mPerson Load (0.7ms)[0m   [0;1mSELECT * FROM "people" WHERE ("people"."id" = 4) [0m
+  [4;35;1mPerson Destroy (18.4ms)[0m   [0mDELETE FROM "people" WHERE "id" = 4[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 39ms (DB: 19) | 302 Found [http://127.0.0.1/people/4]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:02:42) [GET]
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#destroy (for 127.0.0.1 at 2010-01-06 23:04:08) [DELETE]
+  Parameters: {"authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0=", "id"=>"5"}
+  [4;35;1mPerson Load (0.7ms)[0m   [0mSELECT * FROM "people" WHERE ("people"."id" = 5) [0m
+  [4;36;1mPerson Destroy (0.6ms)[0m   [0;1mDELETE FROM "people" WHERE "id" = 5[0m
+Redirected to http://127.0.0.1:3000/people
+Completed in 37ms (DB: 1) | 302 Found [http://127.0.0.1/people/5]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:04:09) [GET]
+  [4;35;1mPerson Load (0.6ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 23:04:10) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 58ms (View: 22, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 23:04:14) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;36;1mPerson Create (6.3ms)[0m   [0;1mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 23:04:14', NULL, NULL, '2010-01-06 23:04:14', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Wed, 6 Jan 2010 23:04:14 +0000
+From: mark.russell@nes.scot.nhs.uk
+To: mark@russell.name
+Subject: NES Fellowships
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4516ee46cee_42f9..fdb487e9c7c6
+
+
+--mimepart_4b4516ee46cee_42f9..fdb487e9c7c6
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>I am currently one of the Research Fellows at NHS Education for Scotla=
+nd, and I'm contacting you as one of the previous fellows at NES.  I was =
+hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as =
+part of this, I have prepared a brief questionnaire which I would be very=
+ grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main=
+ areas in which the fellowships are perceived to have been useful by the =
+fellows, and also ways in which they could be improved. You input would t=
+herefore be invaluable; if you do feel able to contribute, I would be gra=
+teful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href=3D"http://fellowship=
+s.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click=
+ this link</a>, =
+
+or copy the address below into your web browser.</p>
+
+Mark Russell
+
+<p>Many thanks for your participation</p>
+<p>http://fellowships.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa8=
+87c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b4516ee46cee_42f9..fdb487e9c7c6--
+Redirected to http://127.0.0.1:3000/people
+Completed in 2280ms (DB: 6) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:04:16) [GET]
+  [4;35;1mPerson Load (1.0ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:07:49) [GET]
+  [4;36;1mPerson Load (1.0ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 23:07:52) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 60ms (View: 53, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 23:07:56) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;35;1mPerson Create (3.5ms)[0m   [0mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 23:07:56', NULL, NULL, '2010-01-06 23:07:56', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Wed, 6 Jan 2010 23:07:56 +0000
+From: mark.russell@nes.scot.nhs.uk
+To: mark@russell.name
+Subject: NES Fellowships
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4517cc76ab1_42f9..fdb490a4210d9
+
+
+--mimepart_4b4517cc76ab1_42f9..fdb490a4210d9
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>I am currently one of the Research Fellows at NHS Education for Scotla=
+nd, and I'm contacting you as one of the previous fellows at NES.  I was =
+hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as =
+part of this, I have prepared a brief questionnaire which I would be very=
+ grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main=
+ areas in which the fellowships are perceived to have been useful by the =
+fellows, and also ways in which they could be improved. You input would t=
+herefore be invaluable; if you do feel able to contribute, I would be gra=
+teful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href=3D"http://fellowship=
+s.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click=
+ this link</a>, =
+
+or copy the address below into your web browser.</p>
+
+Mark Russell
+
+<p>Many thanks for your participation</p>
+<p>http://fellowships.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa8=
+87c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b4517cc76ab1_42f9..fdb490a4210d9--
+Redirected to http://127.0.0.1:3000/people
+Completed in 2251ms (DB: 3) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:07:58) [GET]
+  [4;36;1mPerson Load (1.2ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 53ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-06 23:08:45) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 143ms (View: 134, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-06 23:08:49) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;36;1mPerson Create (6.0ms)[0m   [0;1mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-06 23:08:49', NULL, NULL, '2010-01-06 23:08:49', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Wed, 6 Jan 2010 23:08:49 +0000
+From: mark.russell@nes.scot.nhs.uk
+To: mark@russell.name
+Subject: NES Fellowships
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4518016f7ff_46bb..fdba5dbc812a
+
+
+--mimepart_4b4518016f7ff_46bb..fdba5dbc812a
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>I am currently one of the Research Fellows at NHS Education for Scotla=
+nd, and I'm contacting you as one of the previous fellows at NES.  I was =
+hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as =
+part of this, I have prepared a brief questionnaire which I would be very=
+ grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main=
+ areas in which the fellowships are perceived to have been useful by the =
+fellows, and also ways in which they could be improved. You input would t=
+herefore be invaluable; if you do feel able to contribute, I would be gra=
+teful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href=3D"http://fellowship=
+s.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click=
+ this link</a>, =
+
+or copy the address below into your web browser.</p>
+
+Mark Russell
+
+<p>Many thanks for your participation</p>
+<p>http://fellowships.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa8=
+87c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b4518016f7ff_46bb..fdba5dbc812a--
+Redirected to http://127.0.0.1:3000/people
+Completed in 1377ms (DB: 6) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:08:50) [GET]
+  [4;35;1mPerson Load (1.4ms)[0m   [0mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 91ms (View: 63, DB: 1) | 200 OK [http://127.0.0.1/people]

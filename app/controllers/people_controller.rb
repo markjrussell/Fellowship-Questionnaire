@@ -34,10 +34,7 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
-		@roles = Role.all
-		@gender = Gender.all
-		@workpattern = WorkPattern.all
-		@servicelength = ServiceLength.all
+
 		@questionlist = QuestionList.all
     @person = Person.find_by_userhash(params[:hash])
   end
@@ -50,7 +47,7 @@ class PeopleController < ApplicationController
     respond_to do |format|
       if @person.save_with_validation(false)           #turn off validations - should only be on for editing
         flash[:notice] = 'Person was successfully created.'
-        format.html { redirect_to(@person) }
+        format.html { redirect_to(people_url)}
         format.xml  { render :xml => @person, :status => :created, :location => @person }
       else
         format.html { render :action => "new" }
@@ -66,8 +63,8 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.update_attributes(params[:person])
-        flash[:notice] = 'Person was successfully updated.'
-        format.html { redirect_to(@person) }
+        flash[:notice] = 'Your answers were successfully saved'
+        format.html { render :action => "thanks" }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -75,6 +72,9 @@ class PeopleController < ApplicationController
       end
     end
   end
+
+	def thanks
+	end
 
   # DELETE /people/1
   # DELETE /people/1.xml

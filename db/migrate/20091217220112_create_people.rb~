@@ -2,7 +2,7 @@ class CreatePeople < ActiveRecord::Migration
   def self.up
     create_table :people do |t|
       t.string :email
-      t.string :userhash
+      t.string :emailhash
       t.string :begin_fellowship_yr
       t.string :complete_vts_yr
       t.string :graduate_yr

@@ -46,9 +46,9 @@ Rails::Initializer.run do |config|
 		  :enable_starttls_auto => true,
 		  :address        => 'smtp.gmail.com',
 		  :port           => 587,
-		  :domain         => 'itforgp.com',
+		  #:domain         => 'itforgp.com',
 		  :authentication => :plain,
-		  :user_name      => 'safequest@itforgp.com',
-		  :password       => 'Sn9DGIwM'
+		  :user_name      => 'markjrussell@gmail.com',
+		  :password       => 'c123laire'
 	}
 end

@@ -5,16 +5,19 @@
 </head>  
 
 <body>  
-<p>Your practice is participating in a General Practice Safety Programme.</p>
-<p>As one of the parts of this programme, 
-we ask all members of participant practices to fill in a short online questionnaire.</p>
-<p>The responses to this questionnaire are completely confidential, 
-and although a report will be given to the practice, 
-no information will be released which could identify individuals.</p>
-<p>If you are willing to participate, please <a href="http://safequest.itforgp.com/people/edit/<%= @person.userhash %>">click this link</a>, 
-or copy the link below into your web browser.</p>
+<p>I am currently one of the Research Fellows at NHS Education for Scotland, and I'm contacting you as one of the previous fellows at NES.  I was hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as part of this, I have prepared a brief questionnaire which I would be very grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main areas in which the fellowships are perceived to have been useful by the fellows, and also ways in which they could be improved. You input would therefore be invaluable; if you do feel able to contribute, I would be grateful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href="http://fellowships.itforgp.com/people/edit/<%= @person.userhash %>">click this link</a>, 
+or copy the address below into your web browser.</p>
+
+Mark Russell
 
 <p>Many thanks for your participation</p>
-<p>http://safequest.itforgp.com/people/edit/<%= @person.userhash %></p>
+<p>http://fellowships.itforgp.com/people/edit/<%= @person.userhash %></p>
 </body> 
 </html> 
