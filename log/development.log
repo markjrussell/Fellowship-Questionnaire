@@ -9797,3 +9797,94 @@ Processing PeopleController#index (for 127.0.0.1 at 2010-01-06 23:08:50) [GET]
 Rendering template within layouts/application
 Rendering people/index
 Completed in 91ms (View: 63, DB: 1) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-07 01:02:52) [GET]
+  [4;36;1mPerson Load (1.6ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 72ms (View: 65, DB: 2) | 200 OK [http://127.0.0.1/people]
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-07 01:02:54) [GET]
+Rendering template within layouts/application
+Rendering people/new
+Completed in 38ms (View: 30, DB: 0) | 200 OK [http://127.0.0.1/people/new]
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-07 01:02:57) [POST]
+  Parameters: {"person"=>{"email"=>"mark@russell.name"}, "commit"=>"Add Staff Member", "authenticity_token"=>"VWwvnyc5hC00sJ2LfP9VBLzXXEIFCXn9WtDD+Cw2KW0="}
+  [4;35;1mPerson Create (6.9ms)[0m   [0mINSERT INTO "people" ("begin_fellowship_yr", "q1", "q2", "created_at", "q3", "q4", "updated_at", "complete_vts_yr", "graduate_yr", "q5", "q6", "q7", "userhash", "email") VALUES(NULL, NULL, NULL, '2010-01-07 01:02:57', NULL, NULL, '2010-01-07 01:02:57', NULL, NULL, NULL, NULL, NULL, 'a7c282e0470ceb4018a4d062aa887c35eca82dcb', NULL)[0m
+Sent mail to mark@russell.name
+
+Date: Thu, 7 Jan 2010 01:02:57 +0000
+From: mark.russell@nes.scot.nhs.uk
+To: mark@russell.name
+Subject: NES Fellowships
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4532c1a5895_5214..fdb9d78701a4
+
+
+--mimepart_4b4532c1a5895_5214..fdb9d78701a4
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> =
+
+<html>  =
+
+<head>  =
+
+	<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"=
+ />  =
+
+</head>  =
+
+
+<body>  =
+
+<p>I am currently one of the Research Fellows at NHS Education for Scotla=
+nd, and I'm contacting you as one of the previous fellows at NES.  I was =
+hoping to get your views on your Fellowship.</p>
+
+<p>I have been asked to conduct an evaluation of the fellowships, and as =
+part of this, I have prepared a brief questionnaire which I would be very=
+ grateful if you could consider answering.</p>
+
+<p>We hope to use the answers to this questionnaire to determine the main=
+ areas in which the fellowships are perceived to have been useful by the =
+fellows, and also ways in which they could be improved. You input would t=
+herefore be invaluable; if you do feel able to contribute, I would be gra=
+teful if you could do so by <b>30 January 2010</b></p>
+
+
+<p>If you are willing to participate, please <a href=3D"http://fellowship=
+s.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa887c35eca82dcb">click=
+ this link</a>, =
+
+or copy the address below into your web browser.</p>
+
+
+<p>Many thanks in anticipation</p>
+<p>Mark Russell</p
+
+
+<p>http://fellowships.itforgp.com/people/edit/a7c282e0470ceb4018a4d062aa8=
+87c35eca82dcb</p>
+</body> =
+
+</html> =
+
+
+--mimepart_4b4532c1a5895_5214..fdb9d78701a4--
+Redirected to http://127.0.0.1:3000/people
+Completed in 1834ms (DB: 7) | 302 Found [http://127.0.0.1/people]
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-07 01:02:59) [GET]
+  [4;36;1mPerson Load (1.6ms)[0m   [0;1mSELECT * FROM "people" [0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 43ms (View: 34, DB: 2) | 200 OK [http://127.0.0.1/people]
